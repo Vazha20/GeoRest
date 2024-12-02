@@ -217,7 +217,7 @@ color: white;
   .bgContactRes{
     background-image: url("../src/img/91979036_100273504974638_1919195476108771328_n.jpg");
     width: 100%;
-    height: 600px   ;
+    height: 700px   ;
     background-size: cover;
     background-position: start;
    
@@ -312,6 +312,10 @@ color: white;
     font-family:Georgia, 'Times New Roman', Times, serif; 
     font-weight: bold;
   }
+  .historyBoxRes li{
+    font-family:Georgia, 'Times New Roman', Times, serif; 
+    font-weight: bold;
+  }
   h3{
     font-family: 'Space Grotesk';
   }
@@ -320,6 +324,7 @@ color: white;
     border: 1px solid black;
     padding: 10px;
     border-radius: 10px;
+    padding: 30px 10px 10px 10px;
   }
   .language-switcher {
     margin: 20px;
@@ -329,6 +334,15 @@ color: white;
     position: relative;
     display: inline-block;
     width: 140px; /* Increased to accommodate the arrow */
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 6px;
+    
+}
+.dropdownRes {
+    position: relative;
+    display: inline-block;
+    width:62px; /* Increased to accommodate the arrow */
     border: 1px solid black;
     border-radius: 10px;
     padding: 6px;
@@ -344,8 +358,20 @@ color: white;
     justify-content: space-between; /* Spaces out the flag, text, and arrow */
     width: 100%;
 }
+.dropbtnRes {
+    background: none;
+    border: none;
+    cursor: pointer;
+    
+    
+}
 
 .dropbtn img {
+    width: 32px;
+    height: 32px;
+     /* Space between flag and text */
+}
+.dropbtnRes img {
     width: 32px;
     height: 32px;
      /* Space between flag and text */
@@ -465,6 +491,7 @@ color: white;
     width: 300px;
     border-radius: 10px;
     height: 300px;
+
     position: relative;
     overflow: hidden;
 }
@@ -652,7 +679,9 @@ color: white;
 .sliderFunRes .dotsFunRes li.activeFunRes{
     width: 30px;
 }
-
+.headerImage img{
+border-radius: 10px;
+}
 
 
 

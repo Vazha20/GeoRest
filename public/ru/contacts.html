@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" type="x-icon" href="../src/img/logo.png">
@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>GeoRest</title>
 </head>
-<body>
+<body id="bgColor">
   
     <div class="desktop-only">
         <div class="container mt-2 d-flex justify-content-between align-items-center">
@@ -37,22 +37,26 @@
                         <span class="dropdown-arrow">&#9662;</span> <!-- Dropdown arrow icon -->
                     </button>
                     <div class="dropdown-content" id="languageDropdown">
-                        <a href="../en/contacts.html" onclick="switchLanguage('en')">
+                        <a href="../en/index.html" onclick="switchLanguage('en')">
                             <img src="../src/img/united-kingdom.png" alt="English"> English
                         </a>
-                        <a href="../ka/contacts.html" onclick="switchLanguage('ka')">
+                        <a href="../ka/index.html" onclick="switchLanguage('ka')">
                             <img src="../src/img/icons8-georgia-96.png" alt="Georgian"> Georgian
                         </a>
-                        <a href="../ru/contacts.html" onclick="switchLanguage('ru')">
+                        <a href="../ru/index.html" onclick="switchLanguage('ru')">
                             <img src="../src/img/icons8-russian-federation-96.png" alt="Russian"> Русский
                         </a>
-                        <a href="../zh/contacts.html" onclick="switchLanguage('zh')">
+                        <a href="../zh/index.html" onclick="switchLanguage('zh')">
                           <img src="../src/img/china.png" alt="Chinese"> Chinese
                       </a>
                     </div>
                 </div>
             </div>
-
+           
+            </div>
+            
+              
+            </div>
         </div>
       </div>
       
@@ -67,35 +71,45 @@
                   <span class="navbar-toggler-icon"></span>
               </button>
                  
-                    <a class="navbar-brand" href="../ru/index.html"><img width="60px" src="../src/img/logo.png"
-                            alt="logo"></a>
-                            <div>
-                              <img width="36px" class="s" src="./src/img/search.svg">
+                    <a class="navbar-brand" href="./index.html"><img width="100px" src="../src/img/IMG_0022.jpeg" alt="logo"></a>
+
+                            <div class="d-flex align-items-center gap-3">
+                              <div>
+                                  <div>
+                                      <button class="dropbtn" onclick="toggleDropdownRes()">
+                                        <img src="../src/img/icons8-russian-federation-96.png" alt="Russian" title="Select Language">
+                                      </button>
+                                      <div class="dropdown-content" id="languageMenu">
+                                          <a href="../en/index.html" onclick="switchLanguageRes('en')">
+                                              <img src="../src/img/united-kingdom.png" alt="English"> English
+                                          </a>
+                                          <a href="../ka/index.html" onclick="switchLanguageRes('ka')">
+                                              <img src="../src/img/icons8-georgia-96.png" alt="Georgian"> Georgian <!-- Updated to Georgian -->
+                                          </a>
+                                          <a href="../ru/index.html" onclick="switchLanguageRes('ru')">
+                                            <img src="../src/img/icons8-russian-federation-96.png" alt="Russian"> Русский
+                                          </a>
+                                          <a href="../zh/index.html" onclick="switchLanguageRes('zh')">
+                                              <img src="../src/img/china.png" alt="Chinese"> Chinese
+                                          </a>
+                                      </div>
+                                  </div>
+                              </div>
                           </div>
                     <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
                       <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link firstRes" href="../ru/aboutus.html">О Нас</a>
+                            <a class="nav-link" href="../ru/aboutus.html">О Нас</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link secondRes" href="#">Туры</a>
+                            <a class="nav-link" href="">Туры</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link thirdRes" href="#    ">Prices</a>
+                            <a class="nav-link" href="">Prices</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fourthRes" href="../ru/contacts.html">Контакты</a>
+                            <a class="nav-linkx" href="../ru/contacts.html">Контакты</a>
                         </li>
-                        
-                          <div>
-                            <select id="language-dropdownRes">
-                                <option value="en" data-flag="🇬🇧">English</option>
-                                <option value="ka" data-flag="🇬🇪">Georgian</option>
-                                <option value="it" data-flag="🇮🇹">Italian</option>
-                            </select>
-                       
-                        </div>
-                      
                     </ul>
                         
                         
@@ -113,10 +127,10 @@
                     <a  href="../ru/aboutus.html">О Нас</a>
                 </li>
                 <li>
-                    <a  href="#">Туры</a>
+                    <a  href="">Туры</a>
                 </li>
                 <li>
-                    <a  href="#">Prices</a>
+                    <a  href="">Prices</a>
                 </li>
                 <li>
                     <a  href="../ru/contacts.html">Контакты</a>
@@ -127,24 +141,26 @@
     </div>
     </div>
    
- <section>
-    <div class="container">
-        <h5 class="nn text-black mt-4">
-          Контакты</h5>
-        <hr>
-        <div class="d-flex gap-5 mt-3">
-        <div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.559982993519!2d44.791161875388745!3d41.70843377602101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x404472e0215e0751%3A0x4fcda48687a1e48a!2sPCShop.ge!5e0!3m2!1sen!2sge!4v1732644250372!5m2!1sen!2sge" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <div>
-            <p class="Bold">Электронная почта: info@georest.ge</p>
-            <p class="Bold">Телефон: 555-567-8901</p>
-            <p class="Bold">Whatsup: 555 555 555</p>
-            <p class="Bold">Адрес: Тбилиси </p>
-        </div>
-    </div>
-</div>
- </section>
+  
+    <section>
+      <div class="container">
+          <h5 class="nn text-black mt-4">
+            Контакты</h5>
+          <hr>
+          <div class="d-flex gap-5 mt-3">
+          <div>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.559982993519!2d44.791161875388745!3d41.70843377602101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x404472e0215e0751%3A0x4fcda48687a1e48a!2sPCShop.ge!5e0!3m2!1sen!2sge!4v1732644250372!5m2!1sen!2sge" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div>
+              <p class="Bold">Электронная почта: info@georest.ge</p>
+              <p class="Bold">Телефон: +995 598 218 281</p>
+              <p class="Bold">Whatsup: +995 598 218 281</p>
+              <p class="Bold">Адрес: Тбилиси </p>
+          </div>
+      </div>
+  </div>
+   </section>
+  
 
     <footer class="desktop-only">
       <div class="container">
@@ -191,7 +207,7 @@
             </div>
             
             <p class="mt-3">Электронная почта: info@georest.ge</p>
-            <p>Телефон: 555-567-8901</p>
+            <p>Телефон: +995 598 218 281</p>
             <p>Адрес: Тбилиси</p>
           </div>
           <div class="d-flex m gap-3">
@@ -205,7 +221,7 @@
             <p>
               Все права защищены © 2019 GeoRest
             </p>
-           >
+           
           </div>
       </div>
   </div>
@@ -232,12 +248,12 @@
       
       </ul>
       <div class="mt-5">
-        <div class="g_border d-flex align-items-center justify-content-start">
-          <h2 class="align-text-center">Контакты</h2>
+        <div class=" d-flex justify-content-center">
+          <h2 class="g_border text-center">Контакты</h2>
         </div>
-        <p class="mt-3">Электронная почта: info@georest.ge</p>
-        <p>Телефон: 555-567-8901</p>
-        <p>Адрес: Тбилиси</p>
+        <p class="mt-3 text-center">Электронная почта: info@georest.ge</p>
+            <p class="text-center">Телефон: +995 598 218 281</p>
+            <p class="text-center">Адрес: Тбилиси</p>
       </div>
       <div class="mt-5 mobile_emailborder d-flex flex-wrap justify-content-center align-items-center gap-3">
         <input class="mb_footer_email" placeholder="Электронная почта">
@@ -268,6 +284,7 @@
 </footer>
 <script src="../script.js"></script>
 <script src="../language.js"></script>
+<script src="../langres.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
