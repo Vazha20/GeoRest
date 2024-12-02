@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="../src/img/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/slider.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../src/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>GeoRest</title>
+</head>
+<body id="bgColor">
+  
+    <div class="desktop-only">
+        <div class="container mt-2 d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-social">
+            <a href="../ru/index.html" class="d-flex align-items-center"><img width="120px" src="../src/img/logo.png"></a>
+            <div class="d-flex gap-3">
+                <div>
+                    <a><img width="20px" src="../src/img/tik-tok.png"></a>  
+                </div>
+                <div>
+                    <a><img width="20px" src="../src/img/instagram (1).png"></a>      
+                </div>
+                <div>
+                    <a><img width="20px" src="../src/img/social.png"></a>     
+                </div>
+            </div>
+            
+            </div>
+            
+            <div class="d-flex align-items-center gap-3 text-decoration">
+              <div class="language-switcher">
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown()">
+                      <img src="../src/img/icons8-russian-federation-96.png" alt="Russian" title="Select Language"> Русский
+                    
+                        <span class="dropdown-arrow">&#9662;</span> <!-- Dropdown arrow icon -->
+                    </button>
+                    <div class="dropdown-content" id="languageDropdown">
+                        <a href="../en/index.html" onclick="switchLanguage('en')">
+                            <img src="../src/img/united-kingdom.png" alt="English"> English
+                        </a>
+                        <a href="../ka/index.html" onclick="switchLanguage('ka')">
+                            <img src="../src/img/icons8-georgia-96.png" alt="Georgian"> Georgian
+                        </a>
+                        <a href="../ru/index.html" onclick="switchLanguage('ru')">
+                            <img src="../src/img/icons8-russian-federation-96.png" alt="Russian"> Русский
+                        </a>
+                        <a href="../zh/index.html" onclick="switchLanguage('zh')">
+                          <img src="../src/img/china.png" alt="Chinese"> Chinese
+                      </a>
+                    </div>
+                </div>
+            </div>
+           
+            </div>
+            
+              
+            </div>
+        </div>
+      </div>
+      
+    <div class="response-only">
+        <div class="container">
+          
+            <nav class="navbar navbar-expand-lg fixed-top bg-white">
+             
+                <div class="container-fluid">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                  aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+                 
+                    <a class="navbar-brand" href="./index.html"><img width="60px" src="../src/img/logo.png"
+                            alt="logo"></a>
+                            <div>
+                              <img width="36px" class="s" src="./src/img/search.svg">
+                          </div>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+                      <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link firstRes" href="./aboutus.html">О Нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link secondRes" href="./personal.html">Туры</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link thirdRes" href="./products.html">Prices</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fourthRes" href="./contacts.html">Контакты</a>
+                        </li>
+                        
+                          <div>
+                            <select id="language-dropdownRes">
+                                <option value="en" data-flag="🇬🇧">English</option>
+                                <option value="ka" data-flag="🇬🇪">Georgian</option>
+                                <option value="it" data-flag="🇮🇹">Italian</option>
+                            </select>
+                       
+                        </div>
+                      
+                    </ul>
+                        
+                        
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div> 
+    <div>
+        <div class="nav-color desktop-only">
+        <div class="container desktop-only ">
+            <nav class="d-flex justify-content-between nav-padding">
+              <ul class="nav-link d-flex text-decoration white">
+                <li>
+                    <a  href="./aboutus.html">О Нас</a>
+                </li>
+                <li>
+                    <a  href="./personal.html">Туры</a>
+                </li>
+                <li>
+                    <a  href="./products.html">Prices</a>
+                </li>
+                <li>
+                    <a  href="./contacts.html">Контакты</a>
+                </li>
+            </ul>
+            
+            </nav>  
+    </div>
+    </div>
+   
+  <div class="desktop-only">
+    <div class="container">
+      <div class="d-flex justify-content-between mt-5 align-items-center">
+        <div>
+          <h1 class="banner_header">
+            Путешествуйте по Грузии
+          </h1>
+          <p class="banner_text mt-5">
+            Грузия, расположенная на перекрёстке Европы и Азии, предлагает богатое сочетание истории, культуры и природной красоты. Независимо от того, интересуетесь ли вы историей, приключениями или гастрономией, Грузия — это место, которое вас очарует.
+          </p>
+          <button class="btn-primary mt-5" type="submit">Забронировать консультацию</button>
+        </div>
+        <div>
+          <img src="../src/img/georgia-map-sights-0-removebg-preview (2).png">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="response-only">
+    <div class="container">
+      <div class="marginTop d-flex justify-content-center">
+
+        <div>
+          
+            <h1 class="banner_header text-center">
+              Путешествуйте по Грузии
+             </h1>
+          
+          <div class="d-flex justify-content-center">
+            <img width="300px" src="../src/img/georgia-map-sights-0-removebg-preview (2).png">
+          </div>
+          <p class="banner_text mt-5 text-center">
+            Грузия, расположенная на перекрёстке Европы и Азии, предлагает богатое сочетание истории, культуры и природной красоты. Независимо от того, интересуетесь ли вы историей, приключениями или гастрономией, Грузия — это место, которое вас очарует.
+          </p>
+          <div class="d-flex justify-content-end">
+            <button class="btn-primary mt-5" type="submit">Забронировать консультацию</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+ <!-- Carousel Container -->
+<div id="carouselExampleIndicators" class="carousel slide mt-5" data-bs-ride="carousel">
+  <!-- Carousel Indicators -->
+  <ol class="carousel-indicators">
+    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+  </ol>
+  
+  <!-- Carousel Inner -->
+  <div class="carousel-inner">
+    <!-- First Slide -->
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="../src/img/102914786_3017801381623100_3569093401791954944_n.jpg" alt="First slide">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Kakheti Tour</h5>
+        <p>A 5-night tour of Kakheti, Georgia, would offer a wonderful mix of culture, history, wine, and natural beauty. Kakheti is known as the wine region of Georgia, and it's home to stunning landscapes, ancient monasteries, and charming villages. Here's a suggested itinerary for a 5-night stay:</p>
+      </div>
+      
+    </div>
+    <!-- Second Slide -->
+    <div class="carousel-item">
+      <img class="d-block w-100" src="../src/img/102914786_3017801381623100_3569093401791954944_n.jpg" alt="First slide">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>sdfsdfsd</h5>
+        <p>fdsfsdfds</p>
+      </div>
+    </div>
+    <!-- Third Slide -->
+    <div class="carousel-item">
+      <img class="d-block w-100" src="../src/img/102914786_3017801381623100_3569093401791954944_n.jpg" alt="First slide">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>sdfsdfsd</h5>
+        <p>fdsfsdfds</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Carousel Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+  
+   <div class="container">
+    <h4 class="text-center banner_header mt-5">Наш процесс</h4>
+    <p class="text-center">Быстрый и простой способ для полного оформления вашего тура.</p>
+  </div>
+  <section class="Process">
+    <div class="process-container">
+      <div class="step">
+        <div class="step-circle">1</div>
+        <div class="step-title">Выберите направление</div>
+      
+      </div>
+      <div class="step">
+        <div class="step-circle" style="background-color: #ffa500;">2</div>
+        <div class="step-title">Выберите апартаменты</div>
+       
+      </div>
+      <div class="step">
+        <div class="step-circle">3</div>
+        <div class="step-title">Выберите транспорт</div>
+        
+      </div>
+    </div>
+  </section>
+
+<div class="container mt-5">
+  <h3 class="banner_header text-center">Лучшие Места</h3>
+</div>
+  <section class="productSlider">
+    <div class="swiper">
+      <div class="slider-wrapper">
+        <div class="card-list swiper-wrapper">
+          
+          <a href="#" class="card-item swiper-slide">
+            <img src="../src/img/6weeClV4nEyNNGtuDybpjOtP5DrV6KtogDf0TFX5.jpeg" alt="User Image" class="user-image">
+            <h2 class="vv">Сигнахи,Кахети</h2>
+          </a>
+       
+          <a href="./index.html" class="card-item swiper-slide">
+            <img src="../src/img/thumb_34230_750_460_0_0_auto.jpg" alt="User Image" class="user-image">
+            <h2 class="vv">Ушгули,Сванети</h2>
+          </a>
+       
+  
+          <a href="#" class="card-item swiper-slide">
+            <img src="../src/img/martvili-by-billy-photogra-hy.jpg" alt="User Image" class="user-image">
+            <h2 class="vv">Окаце,Мартвили</h2>
+          </a>
+       
+  
+          <a href="./index.html" class="card-item swiper-slide">
+            <img src="../src/img/kazbegi-1-1024x678.jpg" alt="User Image" class="user-image">
+            <h2 class="vv">Казбеги</h2>
+          </a>
+       
+  
+  
+          <a href="#" class="card-item swiper-slide">
+            <img src="../src/img/Vardzia-28.jpg" alt="User Image" class="user-image">
+            <h2 class="vv">Вардзия</h2>
+          </a>
+  
+          <a href="./index.html" class="card-item swiper-slide">
+            <img src="../src/img/batumi.jpg" alt="User Image" class="user-image">
+            <h2 class="vv">Батуми,Грузия</h2>
+          </a>
+       
+  
+       
+        </div>
+  
+        <div class="swiper-pagination"></div>
+        <div class="swiper-slide-button swiper-button-prev"></div>
+        <div class="swiper-slide-button swiper-button-next"></div>
+      </div>
+    </div>
+   
+  </section>
+
+  <div class="container mt-5 desktop-only">
+    <h3 class="text-center">Познакомьтесь с грузинским вином</h3>
+  
+    <!-- Flex container for history and carousel sections -->
+    <div class="d-flex justify-content-center gap-5 align-items-center flex-wrap mt-4">
+      
+      <!-- History Section -->
+      <div>
+        <div class="historyBox">
+          <ul>
+          <li>Происхождение наших напитков</li>
+          <hr>
+          <li>Где вы можете попробовать наши напитки?</li>
+          <hr>
+          <li>Качества вина</li>
+          <hr>
+          <li>Процесс производства</li>
+          <hr>
+          <li>Узнайте больше о грузинском вине</li>
+        </ul>
+        </div>
+      </div>
+
+      <div>
+        <div class="slider">
+          <div class="list">
+              <div class="item">
+                  <img src="../src/img/Vineyard-Image-for-Wine-Piece.jpg" alt="">
+              </div>
+              <div class="item">
+                  <img src="../src/img/Kakheti-Wine-Tour-1-1024x447.jpg" alt="">
+              </div>
+              <div class="item">
+                <img src="../src/img/4---Georgia---Vachnadziai-cellar-1200x475.jpg" alt="">
+            </div>
+              <div class="item">
+                  <img src="../src/img/georgian-wine-1638793667.jpg" alt="">
+              </div>
+              <div class="item">
+                <img src="../src/img/prazdnik-vina2.jpg" alt="">
+              </div>
+          </div>
+          <div class="buttons">
+              <button id="prev"><</button>
+              <button id="next">></button>
+          </div>
+          <ul class="dots">
+              <li class="active"></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+          </ul>
+      </div>
+    </div>
+
+    </div> 
+  
+      
+  
+    <!-- See More Button Section -->
+    <div class="d-flex justify-content-end mt-4">
+      <button class="btn-primaryYel">Посмотреть больше...</button>
+    </div>
+  
+  </div>
+  
+  
+  
+  <div class="container mt-5 response-only">
+    <h3 class="text-center">Познакомьтесь с грузинским вином</h3>
+    <div class="d-flex justify-content-center align-items-center mt-4 gap-3 flex-wrap">
+    <div>
+    <div class="historyBoxRes">
+      <ul>
+        <li>Происхождение наших напитков</li>
+          <hr>
+          <li>Где вы можете попробовать наши напитки?</li>
+          <hr>
+          <li>Качества вина</li>
+          <hr>
+          <li>Процесс производства</li>
+          <hr>
+          <li>Узнайте больше о грузинском вине</li>
+      </ul>
+    </div>
+    <div>
+      <div>
+        <div class="sliderRes mt-4">
+          <div class="listRes">
+              <div class="itemRes">
+                <img src="../src/img/Vineyard-Image-for-Wine-Piece.jpg" alt="">
+              </div>
+              <div class="itemRes">
+                <img src="../src/img/Kakheti-Wine-Tour-1-1024x447.jpg" alt="">
+              </div>
+              <div class="itemRes">
+                  <img src="../src/img/4---Georgia---Vachnadziai-cellar-1200x475.jpg" alt="">
+              </div>
+              <div class="itemRes">
+                <img src="../src/img/georgian-wine-1638793667.jpg" alt="">
+              </div>
+              <div class="itemRes">
+                <img src="../src/img/prazdnik-vina2.jpg" alt="">
+              </div>
+          </div>
+          <div class="buttonsRes">
+              <button id="prevRes"><</button>
+              <button id="nextRes">></button>
+          </div>
+          <ul class="dotsRes">
+              <li class="activeRes"></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+          </ul>
+      </div>
+    </div>
+
+    </div> 
+    </div>
+  </div>
+  <div class="d-flex justify-content-end mt-4">
+    <button class="btn-primaryYel">Посмотреть больше..</button>
+  </div>
+  </div>
+
+ 
+
+
+
+  <section class="bgContact mt-5 desktop-only">
+    <div class="container d-flex justify-content-center align-items-center">
+      <div class="mt-5">
+      <h5 class="text-center zz mt-3">Мы создаём</h5>
+      <p class="cc text-center">Самые уникальные путешествия по Грузии
+      </p>
+      </div>
+    </div>
+    <p class="nn text-end">Тбилиси, столица Грузии</p>
+  </section>
+  <section class="bgContactRes mt-5 response-only">
+    <div class="container d-flex justify-content-center align-items-center">
+      <div class="mt-5">
+      <h5 class="text-center zz mt-5">Мы создаём</h5>
+      <p class="cc text-center">Самые уникальные путешествия по Грузии
+      </p>
+      </div>
+    </div>
+    <p class="nn text-center">Тбилиси, столица Грузии</p>
+  </section>
+
+
+  <div class="container mt-5 desktop-only">
+    <h3 class="text-center">Веселье в Грузии</h3>
+  
+    <!-- Flex container for history and carousel sections -->
+    <div class="d-flex justify-content-center gap-5 align-items-center flex-wrap mt-4">
+    
+
+      <div>
+        <div class="sliderFun">
+          <div class="listFun">
+              <div class="itemFun">
+                  <img src="../src/img/6c7c646ba5f0621906c8f1c6338ee318bc87be1f.jpg" alt="">
+              </div>
+              <div class="itemFun">
+                  <img src="../src/img/Otium Image 2.jpg" alt="">
+              </div>
+              <div class="itemFun">
+                  <img src="../src/img/200211131604-georgia-skiing-gudauri-skier-on-slopes.jpg" alt="">
+              </div>
+              <div class="itemFun">
+                  <img src="../src/img/Rafting-in-Georgia_2-800x600.jpg" alt="">
+              </div>
+              <div class="itemFun">
+                  <img src="../src/img/ea.jpg" alt="">
+              </div>
+          </div>
+          <div class="buttonsFun">
+              <button id="prevFun"><</button>
+              <button id="nextFun">></button>
+          </div>
+          <ul class="dotsFun">
+              <li class="activeFun"></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+          </ul>
+      </div>
+    </div>
+
+    <div>
+      <div class="historyBox">
+        <ul>
+          <li>Серные ванны</li>
+          <hr>
+          <li>Казино</li>
+          <hr>
+          <li>Лыжи</li>
+          <hr>
+          <li>Рафтинг</li>
+          <hr>
+          <li>Бездорожье</li>
+        </ul>
+      </div>
+    </div>
+
+    </div> 
+  
+      
+  
+    <!-- See More Button Section -->
+    <div class="d-flex justify-content-end mt-4">
+      <button class="btn-primaryYel">Посмотреть больше...</button>
+    </div>
+  
+  </div>
+  
+  
+  <div class="container mt-5 response-only">
+    <h3 class="text-center">Веселье в Грузии</h3>
+    <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap">
+    <div>
+    
+    <div>
+      <div>
+        <div class="sliderFunRes mt-4">
+          <div class="listFunRes">
+              <div class="itemFunRes">
+                <img src="../src/img/6c7c646ba5f0621906c8f1c6338ee318bc87be1f.jpg" alt="">
+              </div>
+              <div class="itemFunRes">
+                <img src="../src/img/Otium Image 2.jpg" alt="">
+              </div>
+              <div class="itemFunRes">
+                <img src="../src/img/200211131604-georgia-skiing-gudauri-skier-on-slopes.jpg" alt="">
+              </div>
+              <div class="itemFunRes">
+                <img src="../src/img/Rafting-in-Georgia_2-800x600.jpg" alt="">
+              </div>
+              <div class="itemFunRes">
+                <img src="../src/img/ea.jpg" alt="">
+              </div>
+          </div>
+          <div class="buttonsFunRes">
+              <button id="prevFunRes"><</button>
+              <button id="nextFunRes">></button>
+          </div>
+          <ul class="dotsFunRes">
+              <li class="activeFunRes"></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+          </ul>
+      </div>
+      <div class="historyBoxRes mt-4">
+        <ul>
+          <li>Серные ванны</li>
+          <hr>
+          <li>Казино</li>
+          <hr>
+          <li>Лыжи</li>
+          <hr>
+          <li>Рафтинг</li>
+          <hr>
+          <li>Бездорожье</li>
+        </ul>
+      </div>
+    </div>
+
+    </div> 
+    </div>
+  </div>
+  <div class="d-flex justify-content-end mt-4">
+    <button class="btn-primaryYel">Посмотреть больше...</button>
+  </div>
+  </div>
+
+  
+
+    <footer class="desktop-only">
+      <div class="container">
+        <div class="downStyle">
+        <nav class="footer_navs">
+          <div class="d-flex justify-content-between align-text-center">
+            <div class="footerPhoto">
+              <a href="./index.html">
+                <img width="120px" src="../src/img/footerlogo.jpg">
+              </a>
+            </div>
+            <div>
+              <ul class="list-unstyled d-flex gap-5">
+                <li>
+                  О Нас
+                </li>
+                <li>
+                  Туры
+                </li>
+                <li>
+                  Prices
+                </li>
+                
+              
+              </ul>
+            </div>
+            <div class="d-flex gap-3">
+              <div>
+                <img width="20px" src="../src/img/tik-tok.png">
+              </div>
+              <div>
+                <img width="20px" src="../src/img/instagram (1).png">
+              </div>
+              <div>
+                <img width="20px" src="../src/img/social.png">
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="d-flex mt-5 justify-content-between align-items-center">
+          <div class="">
+            <div class="g_border d-flex align-items-center justify-content-center">
+              <h2 class="align-text-center">Контакты</h2>
+            </div>
+            
+            <p class="mt-3">Электронная почта: info@georest.ge</p>
+            <p>Телефон: 555-567-8901</p>
+            <p>Адрес: Тбилиси</p>
+          </div>
+          <div class="d-flex m gap-3">
+            <input class="footer_email" placeholder="Электронная почта">
+            <button class="btn-primary" type="sunmit">Подписаться</button>
+          </div>
+          
+        </div>
+        <hr class="mt-5 footer_line">
+          <div class="d-flex justify-content-end gap-3">
+            <p>
+              Все права защищены © 2019 GeoRest
+            </p>
+           
+          </div>
+      </div>
+  </div>
+</div>
+  </footer>
+  <footer class="response-only">
+    <div class="container mb_down">
+      <div class="footerPhoto">
+        <a href="./index.html">
+          <img width="120px" src="../src/img/footerlogo.jpg">
+        </a>
+      </div>
+      <ul class="list-unstyled mt-5 text-center">
+        <li>
+          О Нас
+        </li>
+        <li class="mt-2">
+          Туры
+        </li>
+        <li class="mt-2">
+          Prices
+        </li>
+       
+      
+      </ul>
+      <div class="mt-5">
+        <div class="g_border d-flex align-items-center justify-content-start">
+          <h2 class="align-text-center">Контакты</h2>
+        </div>
+        <p class="mt-3">Электронная почта: info@georest.ge</p>
+            <p>Телефон: 555-567-8901</p>
+            <p>Адрес: Тбилиси</p>
+      </div>
+      <div class="mt-5 mobile_emailborder d-flex flex-wrap justify-content-center align-items-center gap-3">
+        <input class="mb_footer_email" placeholder="Электронная почта">
+        <button class="btn-primary" type="sunmit">Подписаться</button>
+      </div>
+      <div class="d-flex mt-5 gap-3">
+        <div>
+          <img width="20px" src="../src/img/tik-tok.png">
+        </div>
+        <div>
+          <img width="20px" src="../src/img/instagram (1).png">
+        </div>
+        <div>
+          <img width="20px" src="../src/img/social.png">
+        </div>
+      </div>
+      <div>
+        <hr class="mt-5 mbfooter_line">
+      </div>
+      <div>
+        <p>
+          Все права защищены © 2019 GeoRest
+        </p>
+       
+      </div>
+    </div>
+</div>
+</footer>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="../slider.js"></script>
+<script src="../script.js"></script>
+<script src="../language.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

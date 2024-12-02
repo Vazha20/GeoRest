@@ -1,0 +1,669 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sevillana&family=Slabo+27px&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+}
+.nav-link{
+    list-style: none;
+    font-family:Georgia, 'Times New Roman', Times, serif; 
+    gap: 30px;
+}
+.nav-link a{
+    font-size: larger;
+    font-weight: bold;     
+}
+.nav-link a:hover{
+    color: black;
+}
+.nav-padding{
+    padding: 26px 12px 8px;
+}
+.nav-color {
+    background-color: #00496b;
+    color: white;    
+    width: 100%; 
+    height: 80px;
+}
+.btn-primary{
+    padding: 20px;
+    border-radius: 14px;
+    background-color: #00496b;
+    color: white;
+    border-style: none;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold; 
+}
+.btn-primaryYel{
+    padding: 20px;
+    border-radius: 14px;
+    background-color: #ffa500;
+    color: black;
+    border-style: none;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold; 
+}
+
+.btn-primary:hover {
+    background-color: #012333;
+}
+.text-decoration a{
+    text-decoration: none;
+}
+.white a{
+    color: white;
+}
+
+
+.response-only {
+    display: none;
+}
+
+.desktop-only {
+    display: block;
+}
+
+@media only screen and (max-width: 991px) {
+    .desktop-only {
+        display: none;
+    }
+    
+    .response-only {
+        display: block;
+    }
+}
+
+
+.language-switcher {
+    margin: 20px;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.list-unstyled li{
+    font-family:Georgia, 'Times New Roman', Times, serif; 
+    color: white
+}
+.downStyle {
+    padding: 50px 50px 10px 50px;
+    background: #191A23;
+    border-radius: 45px 45px 0px 0px;
+    margin-top: 60px;
+}
+.downStyle p {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: #FFFFFF;
+}
+.footer_line {
+    border: 1px solid #FFFFFF;
+}
+.mb_down {
+    margin-top: 80px;
+    padding: 50px 20px 30px;
+    width: 106%;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background: #191A23;
+}
+
+.mobile_emailborder {
+    padding: 40px;
+    background: #292A32;
+    border-radius: 14px;
+}
+.mb_footer_email {
+    padding: 20px;
+    max-width: 186px;
+    height: 60px;
+    border: 1px solid #FFFFFF;
+    border-radius: 14px;
+}
+
+.vertical_line {
+width: 186px;
+height: 0px;
+border: 1px solid #FFFFFF;
+transform: rotate(90deg);
+}
+
+.email_box {
+
+background: #F3F3F3;
+border-radius: 45px;
+}
+
+
+
+.footer_link {
+font-family: 'Space Grotesk';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 23px;
+color: white;
+}
+.m {
+padding: 50px;
+
+
+background: #292A32;
+border-radius: 14px;
+}
+
+.footer_email {
+padding: 22px 35px;
+width: 285px;
+height: 67px;
+border: 1px solid #FFFFFF;
+border-radius: 14px;
+}
+.footer_line {
+    border: 1px solid white;
+    }
+.mbfooter_line {
+    width: 300px;
+    border: 1px solid white;
+}
+
+.g_border {
+    width: 200px;
+padding: 6px;
+color: white;
+background: #00496b;
+border-radius: 7px;
+}
+
+.footer_navs {
+color: white;
+}
+.footerPhoto img{
+    border-radius: 10px;
+}
+.marginTop{
+    margin-top: 120px;
+}
+.banner_header {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 77px;
+    color: #000000;
+}
+.banner_text {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: #000000;
+}
+.bgContact{
+    background-image: url("../src/img/91979036_100273504974638_1919195476108771328_n.jpg");
+    width: 100%;
+    height: 330px   ;
+    background-size: cover;
+    background-position: start;
+  }
+  .bgContactRes{
+    background-image: url("../src/img/91979036_100273504974638_1919195476108771328_n.jpg");
+    width: 100%;
+    height: 600px   ;
+    background-size: cover;
+    background-position: start;
+   
+  }
+.positionRel{
+    position: relative;
+}
+.positionAbs{
+    position: absolute;
+}
+.Process{
+    font-family: Arial, sans-serif;
+}
+.process-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px auto;
+    max-width: 800px;
+  }
+  .step {
+    text-align: center;
+    width: 30%;
+    position: relative;
+  }
+  .step-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #00496b;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 auto 10px;
+  }
+  .step-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 5px;
+  }
+  .step-description {
+    font-size: 14px;
+    color: #555;
+  }
+  .step:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -25%;
+    width: 50%;
+    height: 2px;
+    background-color: #ddd;
+  }
+.zz{
+    font-family: "Sevillana", cursive;
+    font-weight: bold;
+    color: black;
+    font-size: 80px;
+  }
+  .cc{
+    font-family: "Sevillana", cursive;
+    font-weight: bold;
+    color: black;
+    font-size: 50px;
+  }
+  .vv{
+    font-family: 'Space Grotesk';
+  }
+  .nn{
+    font-family: 'Space Grotesk';
+    font-size: 40px;
+    font-weight: bolder;
+    color: white;
+    margin-right: 20px;
+  }
+  .Bold{
+    font-weight: bold;
+  }
+  .historyBox{
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+    max-width: 100%;
+    border: 1px solid black;
+    padding: 20px 10px 10px 10px;
+  }
+  .historyBox li{
+    font-family:Georgia, 'Times New Roman', Times, serif; 
+    font-weight: bold;
+  }
+  h3{
+    font-family: 'Space Grotesk';
+  }
+  .historyBoxRes{
+    width: 300px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .language-switcher {
+    margin: 20px;
+    
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 140px; /* Increased to accommodate the arrow */
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 6px;
+    
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Aligns text and flag vertically */
+    justify-content: space-between; /* Spaces out the flag, text, and arrow */
+    width: 100%;
+}
+
+.dropbtn img {
+    width: 32px;
+    height: 32px;
+     /* Space between flag and text */
+}
+
+.dropdown-arrow {
+    font-size: 20px;
+    
+    transition: transform 0.3s ease; /* Smooth rotation for arrow */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    margin-top: 20px;
+    right: -12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown-content img {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+
+/* Rotate the arrow when the dropdown is open */
+.dropdown-content.show-arrow .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.content {
+    margin-top: 50px;
+}
+
+
+.slider{
+    width: 500px;
+    border-radius: 10px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+.slider .list{
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s;
+}
+.slider .list img{
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    
+}
+.slider .buttons{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.slider .buttons button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ffa500;
+    color: black;
+    border: none;
+    font-family: monospace;
+    font-weight:bolder;
+}
+.slider .dots{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.slider .dots li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #ffa500;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.slider .dots li.active{
+    width: 30px;
+}
+
+.sliderRes{
+    width: 300px;
+    border-radius: 10px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+.sliderRes .listRes{
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s;
+}
+.sliderRes .listRes img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    
+}
+.sliderRes .buttonsRes{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.sliderRes .buttonsRes button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ffa500;
+    color: black;
+    border: none;
+    font-family: monospace;
+    font-weight:bolder;
+}
+.sliderRes .dotsRes{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.sliderRes .dotsRes li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #ffa500;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.sliderRes .dotsRes li.activeRes{
+    width: 30px;
+}
+
+.sliderFun{
+    width: 500px;
+    border-radius: 10px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+.sliderFun .listFun{
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s;
+}
+.sliderFun .listFun img{
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    
+}
+.sliderFun .buttonsFun{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.sliderFun .buttonsFun button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ffa500;
+    color: black;
+    border: none;
+    font-family: monospace;
+    font-weight:bolder;
+}
+.sliderFun .dotsFun{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.sliderFun .dotsFun li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #ffa500;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.sliderFun .dotsFun li.activeFun{
+    width: 30px;
+}
+
+.sliderFunRes{
+    width: 300px;
+    border-radius: 10px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+.sliderFunRes .listFunRes{
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s;
+}
+.sliderFunRes .listFunRes img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    
+}
+.sliderFunRes .buttonsFunRes{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.sliderFunRes .buttonsFunRes button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ffa500;
+    color: black;
+    border: none;
+    font-family: monospace;
+    font-weight:bolder;
+}
+.sliderFunRes .dotsFunRes{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.sliderFunRes .dotsFunRes li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #ffa500;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.sliderFunRes .dotsFunRes li.activeFunRes{
+    width: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
