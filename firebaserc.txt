@@ -1,5 +1,0 @@
-{
-  "projects": {
-    "default": "geofarmaco-ad42c"
-  }
-}
