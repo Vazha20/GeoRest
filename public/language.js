@@ -1,63 +1,66 @@
-// Function to switch language based on the selected language code (en, ka, ru, zh)
-function switchLanguage(language) {
-    
+function switchLanguage(event) {
+    event.preventDefault(); // Prevent immediate navigation
 
-    // Change the page URL to reflect the selected language (e.g., /en, /ka, /ru, /zh)
-    const currentUrl = window.location.pathname;
-    const newUrl = currentUrl.replace(/\/(en|ka|ru|zh)/, `/${language}`);
+    // Show the loading spinner and hide the page content
+    document.getElementById('loading-spinner').style.display = 'block';
+    document.getElementById('page-content').style.display = 'none';
 
-    // If no language code is in the URL, append it
-    if (!newUrl.match(/\/(en|ka|ru|zh)/)) {
-        window.history.pushState({}, "", `/${language}${currentUrl}`);
+    // Set a 5-second delay before hiding the spinner and navigating to the new page
+    setTimeout(function () {
+        // Hide the loading spinner and show the page content
+        document.getElementById("languageDropdown").style.display = "none";
+        document.getElementById('loading-spinner').style.display = 'none';
+        document.getElementById('page-content').style.display = 'block';
+
+        // Now navigate to the new page
+        window.location.href = event.target.href; // Redirect after delay
+    }, 2500); // 5000ms = 5 seconds
+}
+
+function toggleDropdown() {
+    const dropdown = document.getElementById("languageDropdown");
+    const arrow = document.querySelector(".dropdown-arrow");
+
+    // Toggle dropdown visibility
+    if (dropdown.style.display === "block") {
+        dropdown.style.display = "none";
+        arrow.innerHTML = "&#9662;"; // Set the arrow to down
     } else {
-        window.history.pushState({}, "", newUrl);
+        dropdown.style.display = "block";
+        arrow.innerHTML = "&#9652;"; // Set the arrow to up
     }
 }
 
-// Optionally, you could update the button label and the flag image here
-function updateButton(language) {
-    const button = document.querySelector(".dropbtn");
-    const flag = button.querySelector("img");
-    const languageLabel = button.querySelector("span");
 
-    if (language === "en") {
-        button.textContent = "English";
-        flag.src = "./src/img/united-kingdom.png";
-    } else if (language === "ka") {
-        button.textContent = "Georgian";
-        flag.src = "./src/img/icons8-georgia-96.png";
-    } else if (language === "ru") {
-        button.textContent = "Russian";
-        flag.src = "./src/img/icons8-russian-federation-96.png";
-    } else if (language === "zh") {
-        button.textContent = "中文";
-        flag.src = "./src/img/china.png";  // Use an appropriate flag image
-    }
+function switchLanguageRes(event) {
+    event.preventDefault(); // Prevent immediate navigation
+
+    // Show the loading spinner and hide the page content
+    document.getElementById('loading-spinner').style.display = 'block';
+    document.getElementById('page-content').style.display = 'none';
+
+    // Set a 5-second delay before hiding the spinner and navigating to the new page
+    setTimeout(function () {
+        // Hide the loading spinner and show the page content
+        document.getElementById("languageMenu").style.display = "none";
+        document.getElementById('loading-spinner').style.display = 'none';
+        document.getElementById('page-content').style.display = 'block';
+
+        // Now navigate to the new page
+        window.location.href = event.target.href; // Redirect after delay
+    }, 2500); // 5000ms = 5 seconds
 }
 
-// Listen for changes in the URL to load the correct language (if not using page reloads)
-window.addEventListener('popstate', function() {
-    const path = window.location.pathname;
-    const language = path.split('/')[1]; // e.g., "en", "ka", "ru", "zh"
-
-    if (translations[language]) {
-        switchLanguage(language);
-        updateButton(language);
-    }
-});
-
-// Run once when the page loads to detect the language from the URL
-document.addEventListener('DOMContentLoaded', function() {
-    const path = window.location.pathname;
-    const language = path.split('/')[1]; // e.g., "en", "ka", "ru", "zh"
+function toggleDropdownRes() {
+    const dropdown = document.getElementById("languageMenu");
     
-    if (translations[language]) {
-        switchLanguage(language);
-        updateButton(language);
-    } else {
-        // Default to English if no language is in the URL
-        switchLanguage('en');
-        updateButton('en');
-    }
-});
 
+    // Toggle dropdown visibility
+     if (dropdown.style.display === "block") {
+        dropdown.style.display = "none";
+        
+   } else {
+     dropdown.style.display = "block";
+     
+   }
+  }

@@ -11,7 +11,12 @@
     <title>GeoRest</title>
 </head>
 <body id="bgColor">
-  
+  <div class="container text-center loading" id="loading-spinner" style="display: none;">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only"></span>
+    </div>
+  </div>
+  <div id="page-content">
     <div class="desktop-only">
         <div class="container mt-2 d-flex justify-content-between align-items-center">
             <div class="d-flex align-items-center gap-social">
@@ -38,23 +43,20 @@
                         <span class="dropdown-arrow">&#9662;</span> <!-- Dropdown arrow icon -->
                     </button>
                     <div class="dropdown-content" id="languageDropdown">
-                        <a href="../en/index.html" onclick="switchLanguage('en')">
-                            <img src="../src/img/united-kingdom.png" alt="English"> English
-                        </a>
-                        <a href="../ka/index.html" onclick="switchLanguage('ka')">
-                            <img src="../src/img/icons8-georgia-96.png" alt="Georgian"> Georgian
-                        </a>
-                        <a href="../ru/index.html" onclick="switchLanguage('ru')">
-                            <img src="../src/img/icons8-russian-federation-96.png" alt="Russian"> Russian
-                        </a>
-                        <a href="../zh/index.html" onclick="switchLanguage('zh')">
-                          <img src="../src/img/china.png" alt="Chinese"> Chinese
-                      </a>
+                      <a href="../index.html"  onclick="switchLanguage(event)">
+                        <img src="../src/img/united-kingdom.png" alt="English"> English
+                    </a>
+                    <a href="../ka/index.html"  onclick="switchLanguage(event)">
+                        <img src="../src/img/icons8-georgia-96.png" alt="Georgian"> Georgian
+                    </a>
+                    <a href="../ru/index.html"  onclick="switchLanguage(event)">
+                        <img src="../src/img/icons8-russian-federation-96.png" alt="Russian"> Русский
+                    </a>
                     </div>
                 </div>
             </div>
             
-            </div>
+            
             
               
             </div>
@@ -81,17 +83,14 @@
                                       <img src="../src/img/china.png" alt="Chinese" title="Select Language">
                                   </button>
                                   <div class="dropdown-content" id="languageMenu">
-                                      <a href="../en/index.html" onclick="switchLanguageRes('en')">
+                                      <a href="../index.html" onclick="switchLanguageRes(event)">
                                           <img src="../src/img/united-kingdom.png" alt="English"> English
                                       </a>
-                                      <a href="../ka/index.html" onclick="switchLanguageRes('ka')">
+                                      <a href="../ka/index.html" onclick="switchLanguageRes(event)">
                                           <img src="../src/img/icons8-georgia-96.png" alt="Georgian"> Georgian <!-- Updated to Georgian -->
                                       </a>
-                                      <a href="../ru/index.html" onclick="switchLanguageRes('ru')">
+                                      <a href="../ru/index.html" onclick="switchLanguageRes(event)">
                                           <img src="../src/img/icons8-russian-federation-96.png" alt="Russian"> Russian
-                                      </a>
-                                      <a href="../zh/index.html" onclick="switchLanguageRes('zh')">
-                                          <img src="../src/img/china.png" alt="Chinese"> Chinese
                                       </a>
                                       </div>
                                   </div>
@@ -186,7 +185,7 @@
     </div>
   </div>
 
- <!-- Carousel Container -->
+<!-- Carousel Container -->
 <div id="carouselExampleIndicators" class="carousel slide mt-5" data-bs-ride="carousel">
   <!-- Carousel Indicators -->
   <ol class="carousel-indicators">
@@ -199,27 +198,27 @@
   <div class="carousel-inner">
     <!-- First Slide -->
     <div class="carousel-item active">
-      <img class="d-block w-100" src="../src/img/102914786_3017801381623100_3569093401791954944_n.jpg" alt="First slide">
+      <img class="d-block w-100" height="380px" src="../src/img/istockphoto-1371964513-640x640.jpg" alt="First slide">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Kakheti Tour</h5>
-        <p>A 5-night tour of Kakheti, Georgia, would offer a wonderful mix of culture, history, wine, and natural beauty. Kakheti is known as the wine region of Georgia, and it's home to stunning landscapes, ancient monasteries, and charming villages. Here's a suggested itinerary for a 5-night stay:</p>
+        <h5>Mountain Climber</h5>
+       
       </div>
       
     </div>
     <!-- Second Slide -->
     <div class="carousel-item">
-      <img class="d-block w-100" src="../src/img/102914786_3017801381623100_3569093401791954944_n.jpg" alt="First slide">
+      <img class="d-block w-100" height="380px" src="../src/img/seaside-adjara-black-sea.jpg" alt="First slide">
       <div class="carousel-caption d-none d-md-block">
-        <h5>sdfsdfsd</h5>
-        <p>fdsfsdfds</p>
+        <h5>Black Sea</h5>
+        <p></p>
       </div>
     </div>
     <!-- Third Slide -->
     <div class="carousel-item">
-      <img class="d-block w-100" src="../src/img/102914786_3017801381623100_3569093401791954944_n.jpg" alt="First slide">
+      <img class="d-block w-100" height="380px" src="../src/img/editor-image_d113448e-2552-4bf5-96c4-8d2d96fc6113.jpeg" alt="First slide">
       <div class="carousel-caption d-none d-md-block">
-        <h5>sdfsdfsd</h5>
-        <p>fdsfsdfds</p>
+        <h5>Konsierzh,Tbilisi</h5>
+        <p></p>
       </div>
     </div>
   </div>
@@ -234,7 +233,6 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-
   
    <div class="container">
     <h4 class="text-center banner_header mt-5">我们的流程</h4>
@@ -273,7 +271,7 @@
             <h2 class="vv">Sighnaghi,Kakheti</h2>
           </a>
        
-          <a href="./index.html" class="card-item swiper-slide">
+          <a href="#" class="card-item swiper-slide">
             <img src="../src/img/thumb_34230_750_460_0_0_auto.jpg" alt="User Image" class="user-image">
             <h2 class="vv">Ushguli,Svaneti</h2>
           </a>
@@ -285,9 +283,10 @@
           </a>
        
   
-          <a href="./index.html" class="card-item swiper-slide">
-            <img src="../src/img/kazbegi-1-1024x678.jpg" alt="User Image" class="user-image">
-            <h2 class="vv">Kazbegi</h2>
+          <a href="#" class="card-item swiper-slide">
+            <img src="../src/img/Goristatue.JPG" alt="User Image" class="user-image">
+            <h2 class="vv">
+              Stalin's monument</h2>
           </a>
        
   
@@ -297,7 +296,7 @@
             <h2 class="vv">Vardzia</h2>
           </a>
   
-          <a href="./index.html" class="card-item swiper-slide">
+          <a href="#" class="card-item swiper-slide">
             <img src="../src/img/batumi.jpg" alt="User Image" class="user-image">
             <h2 class="vv">Batumi,Georgia</h2>
           </a>
@@ -404,21 +403,21 @@
       <div>
         <div class="sliderRes mt-4">
           <div class="listRes">
-              <div class="itemRes">
-                  <img src="../src/img/4---Georgia---Vachnadziai-cellar-1200x475.jpg" alt="">
-              </div>
-              <div class="itemRes">
-                  <img src="../src/img/prazdnik-vina2.jpg" alt="">
-              </div>
-              <div class="itemRes">
-                  <img src="../src/img/4---Georgia---Vachnadziai-cellar-1200x475.jpg" alt="">
-              </div>
-              <div class="itemRes">
-                  <img src="../src/img/4---Georgia---Vachnadziai-cellar-1200x475.jpg" alt="">
-              </div>
-              <div class="itemRes">
-                  <img src="../src/img/4---Georgia---Vachnadziai-cellar-1200x475.jpg" alt="">
-              </div>
+            <div class="itemRes">
+              <img src="../src/img/Vineyard-Image-for-Wine-Piece.jpg" alt="">
+            </div>
+            <div class="itemRes">
+              <img src="../src/img/Kakheti-Wine-Tour-1-1024x447.jpg" alt="">
+            </div>
+            <div class="itemRes">
+                <img src="../src/img/4---Georgia---Vachnadziai-cellar-1200x475.jpg" alt="">
+            </div>
+            <div class="itemRes">
+              <img src="../src/img/georgian-wine-1638793667.jpg" alt="">
+            </div>
+            <div class="itemRes">
+              <img src="../src/img/prazdnik-vina2.jpg" alt="">
+            </div>
           </div>
           <div class="buttonsRes">
               <button id="prevRes"><</button>
@@ -446,23 +445,27 @@
 
 
 
-  <section class="bgContact mt-5 desktop-only">
-    <div class="container d-flex justify-content-center align-items-center">
-      <div class="mt-5">
-      <h5 class="text-center zz mt-3">我们创造 </h5>
+  <section class="mt-5 desktop-only">
+    <div class="bgContact">
+      <div class="container">
+      <div class="mt-4">
+      <h5 class="text-center zz">我们创造</h5>
       <p class="cc text-center">格鲁吉亚最独特的旅行体验</p>
       </div>
     </div>
-    <p class="nn text-end">第比利斯，格鲁吉亚的首都</p>
+    </div>
+
   </section>
-  <section class="bgContactRes mt-5 response-only">
-    <div class="container d-flex justify-content-center align-items-center">
-      <div class="mt-5">
-      <h5 class="text-center zz mt-5">我们创造</h5>
+  
+  <section class="mt-5 response-only">
+    <div class="bgContactRes">
+    <div class="container">
+      <div class="mt-4">
+      <h5 class="text-center zz">我们创造</h5>
       <p class="cc text-center">格鲁吉亚最独特的旅行体验</p>
       </div>
     </div>
-    <p class="nn text-center">第比利斯，格鲁吉亚的首都</p>
+</div>
   </section>
 
 
@@ -543,21 +546,21 @@
       <div>
         <div class="sliderFunRes mt-4">
           <div class="listFunRes">
-              <div class="itemFunRes">
-                  <img src="../src/img/4---Georgia---Vachnadziai-cellar-1200x475.jpg" alt="">
-              </div>
-              <div class="itemFunRes">
-                  <img src="../src/img/4---Georgia---Vachnadziai-cellar-1200x475.jpg" alt="">
-              </div>
-              <div class="itemFunRes">
-                  <img src="../src/img/4---Georgia---Vachnadziai-cellar-1200x475.jpg" alt="">
-              </div>
-              <div class="itemFunRes">
-                  <img src="../src/img/4---Georgia---Vachnadziai-cellar-1200x475.jpg" alt="">
-              </div>
-              <div class="itemFunRes">
-                  <img src="../src/img/4---Georgia---Vachnadziai-cellar-1200x475.jpg" alt="">
-              </div>
+            <div class="itemFunRes">
+              <img src="../src/img/6c7c646ba5f0621906c8f1c6338ee318bc87be1f.jpg" alt="">
+            </div>
+            <div class="itemFunRes">
+              <img src="../src/img/Otium Image 2.jpg" alt="">
+            </div>
+            <div class="itemFunRes">
+              <img src="../src/img/200211131604-georgia-skiing-gudauri-skier-on-slopes.jpg" alt="">
+            </div>
+            <div class="itemFunRes">
+              <img src="../src/img/Rafting-in-Georgia_2-800x600.jpg" alt="">
+            </div>
+            <div class="itemFunRes">
+              <img src="../src/img/ea.jpg" alt="">
+            </div>
           </div>
           <div class="buttonsFunRes">
               <button id="prevFunRes"><</button>
@@ -692,7 +695,7 @@
       </div>
       <div class="mt-5 mobile_emailborder d-flex flex-wrap justify-content-center align-items-center gap-3">
         <input class="mb_footer_email" placeholder="电子邮件">
-        <button class="btn-primary" type="sunmit">订阅新闻</button>
+        <button class="btn-primaryRes" type="sunmit">订阅新闻</button>
       </div>
       <div class="d-flex mt-5 gap-3">
         <div>
@@ -717,7 +720,7 @@
     </div>
 </div>
 </footer>
-
+</div>
 
 
 
@@ -727,7 +730,6 @@
 <script src="../slider.js"></script>
 <script src="../script.js"></script>
 <script src="../language.js"></script>
-<script src="../langres.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

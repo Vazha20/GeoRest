@@ -36,18 +36,15 @@
                         <span class="dropdown-arrow">&#9662;</span> <!-- Dropdown arrow icon -->
                     </button>
                     <div class="dropdown-content" id="languageDropdown">
-                        <a href="../en/index.html" onclick="switchLanguage('en')">
+                        <a href="../contacts.html" onclick="switchLanguage('en')">
                             <img src="../src/img/united-kingdom.png" alt="English"> English
                         </a>
-                        <a href="../ka/index.html" onclick="switchLanguage('ka')">
+                        <a href="../ka/contacts.html"  onclick="switchLanguage('ka')">
                             <img src="../src/img/icons8-georgia-96.png" alt="Georgian"> Georgian
                         </a>
-                        <a href="../ru/index.html" onclick="switchLanguage('ru')">
+                        <a href="../ru/contacts.html"  onclick="switchLanguage('ru')">
                             <img src="../src/img/icons8-russian-federation-96.png" alt="Russian"> Russian
                         </a>
-                        <a href="../zh/index.html" onclick="switchLanguage('zh')">
-                          <img src="../src/img/china.png" alt="Chinese"> Chinese
-                      </a>
                     </div>
                 </div>
             </div>
@@ -79,17 +76,14 @@
                                       <img src="../src/img/china.png" alt="Chinese" title="Select Language">
                                   </button>
                                   <div class="dropdown-content" id="languageMenu">
-                                      <a href="../en/index.html" onclick="switchLanguageRes('en')">
+                                      <a href="../contacts.html" onclick="switchLanguageRes(event)">
                                           <img src="../src/img/united-kingdom.png" alt="English"> English
                                       </a>
-                                      <a href="../ka/index.html" onclick="switchLanguageRes('ka')">
+                                      <a href="../ka/contacts.html" onclick="switchLanguageRes(event)">
                                           <img src="../src/img/icons8-georgia-96.png" alt="Georgian"> Georgian <!-- Updated to Georgian -->
                                       </a>
-                                      <a href="../ru/index.html" onclick="switchLanguageRes('ru')">
+                                      <a href="../ru/contacts.html" onclick="switchLanguageRes(event)">
                                           <img src="../src/img/icons8-russian-federation-96.png" alt="Russian"> Russian
-                                      </a>
-                                      <a href="../zh/index.html" onclick="switchLanguageRes('zh')">
-                                          <img src="../src/img/china.png" alt="Chinese"> Chinese
                                       </a>
                                       </div>
                                   </div>
@@ -140,24 +134,29 @@
             </nav>  
     </div>
     </div>
-   
-    <section>
-      <div class="container">
-          <h5 class="nn text-black mt-4">Contacts</h5>
-          <hr>
-          <div class="d-flex gap-5 mt-3">
-          <div>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.559982993519!2d44.791161875388745!3d41.70843377602101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x404472e0215e0751%3A0x4fcda48687a1e48a!2sPCShop.ge!5e0!3m2!1sen!2sge!4v1732644250372!5m2!1sen!2sge" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-          <div>
-              <p class="Bold">电子邮件：info@georest.ge</p>
+ 
+
+   <section>
+    <div class="container">
+        <h5 class="desktop-only nn text-black text-center mt-4">联系方式</h5>
+        <h5 class="response-only nn text-black marginTop text-center">联系方式</h5>
+        <hr>
+        <div class="d-flex gap-5 mt-3 flex-wrap justify-content-center">
+          <div class="desktop-only">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.559982993519!2d44.791161875388745!3d41.70843377602101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x404472e0215e0751%3A0x4fcda48687a1e48a!2sPCShop.ge!5e0!3m2!1sen!2sge!4v1732644250372!5m2!1sen!2sge" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="response-only">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.559982993519!2d44.791161875388745!3d41.70843377602101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x404472e0215e0751%3A0x4fcda48687a1e48a!2sPCShop.ge!5e0!3m2!1sen!2sge!4v1732644250372!5m2!1sen!2sge" width="300" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+        <div>
+          <p class="Bold">电子邮件：info@georest.ge</p>
               <p class="Bold">电话：+995 598 218 281</p>
               <p class="Bold">Whatsup: +995 598 218 281</p>
               <p class="Bold">地址：第比利斯</p>
-          </div>
-      </div>
+        </div>
+    </div>
   </div>
-   </section>
+  </section>
   
 
     <footer class="desktop-only">
@@ -256,7 +255,7 @@
       </div>
       <div class="mt-5 mobile_emailborder d-flex flex-wrap justify-content-center align-items-center gap-3">
         <input class="mb_footer_email" placeholder="电子邮件">
-        <button class="btn-primary" type="sunmit">订阅新闻</button>
+        <button class="btn-primaryRes" type="sunmit">订阅新闻</button>
       </div>
       <div class="d-flex mt-5 gap-3">
         <div>
@@ -283,7 +282,6 @@
 </footer>
 <script src="../script.js"></script>
 <script src="../language.js"></script>
-<script src="../langres.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
