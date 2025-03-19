@@ -1,6 +1,7 @@
 {
   "projects": {
-    "georest00": "georest00"
+    "georest00": "georest00",
+    "default": "georest00"
   },
   "targets": {},
   "etags": {}

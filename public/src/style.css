@@ -82,9 +82,10 @@ select {
     font-size: 16px;
 }
 
-.list-unstyled li{
+.list-unstyled a{
     font-family:Georgia, 'Times New Roman', Times, serif; 
-    color: white
+    color: white;
+   
 }
 .downStyle {
     padding: 50px 50px 10px 50px;
@@ -129,8 +130,6 @@ select {
 }
 .btn-primaryRes{
     padding: 20px;
-    width: 186px;
-    height: 60px;
     border-radius: 14px;
     background-color: #00496b;
     color: white;
@@ -347,7 +346,7 @@ color: white;
 .dropdown {
     position: relative;
     display: inline-block;
-    width: 140px; /* Increased to accommodate the arrow */
+    width: 150px; /* Increased to accommodate the arrow */
     border: 1px solid black;
     border-radius: 10px;
     padding: 6px;
