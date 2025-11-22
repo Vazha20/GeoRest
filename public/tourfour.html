@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="x-icon" href="./src/img/logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/slider.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./src/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>GeoRest</title>
+</head>
+<body id="color_bg" class="glass-effect">
+
+   
+  <div class="container text-center loading" id="loading-spinner" style="display: none;">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only"></span>
+    </div>
+  </div>
+
+  <div id="page-content">
+    <div class="desktop-only">
+        <div class="container mt-2 d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-social">
+            <a href="./index.html" class="d-flex align-items-center"><img width="120px" src="./src/img/logo.png"></a>
+            <div class="d-flex gap-3">
+                <div>
+                    <a><img width="20px" src="./src/img/tik-tok.png"></a>  
+                </div>
+                <div>
+                    <a><img width="20px" src="./src/img/instagram (1).png"></a>      
+                </div>
+                <div>
+                    <a><img width="20px" src="./src/img/social.png"></a>     
+                </div>
+            </div>
+            
+            </div>
+            
+            <div class="d-flex align-items-center gap-3 text-decoration">
+              <div class="language-switcher">
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown()">
+                        <img src="./src/img/united-kingdom.png" alt="English" title="Select Language"> English
+                        <span class="dropdown-arrow">▾</span> <!-- Dropdown arrow icon -->
+                    </button>
+                    <div class="dropdown-content" id="languageDropdown">
+                        <a href="./ka/index.html" onclick="switchLanguage(event)">
+                            <img src="./src/img/icons8-georgia-96.png" alt="Georgian"> Georgian
+                        </a>
+                        <a href="./ru/index.html" onclick="switchLanguage(event)">
+                            <img src="./src/img/icons8-russian-federation-96.png" alt="Russian"> Russian
+                        </a>
+                        <a href="./zh/index.html" onclick="switchLanguage(event)">
+                          <img src="./src/img/china.png" alt="Chinese"> Chinese
+                      </a>
+                    </div>
+                </div>
+            </div>
+            
+            
+              
+            </div>
+        </div>
+      </div>
+      
+
+      
+      <div class="response-only">
+        <div class="container">
+          
+          <nav class="navbar navbar-expand-lg fixed-top bg-white">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+                <!-- Burger Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <!-- Logo -->
+                <a class="navbar-brand" href="./index.html">&nbsp;&nbsp;<img width="70px" height="70px" src="./src/img/logo.png" alt="logo"></a>
+        
+                <!-- Language Switcher -->
+                <div class="d-flex align-items-center gap-3">
+                    <div>
+                        <div>
+                          <button class="dropbtn" onclick="toggleDropdownRes()">
+                            <img src="./src/img/united-kingdom.png" alt="English" title="Select Language">
+                          </button>
+                          <div class="dropdown-content" id="languageMenu">
+                            <a href="./ka/index.html" onclick="switchLanguageRes(event)">
+                                <img src="./src/img/icons8-georgia-96.png" alt="Georgian"> Georgian <!-- Updated to Georgian -->
+                            </a>
+                            <a href="./ru/index.html" onclick="switchLanguageRes(event)">
+                                <img src="./src/img/icons8-russian-federation-96.png" alt="Russian"> Russian
+                            </a>
+                            <a href="./zh/index.html" onclick="switchLanguageRes(event)">
+                                <img src="./src/img/china.png" alt="Chinese"> Chinese
+                            </a>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Navbar Items -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="./aboutus.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./tours.html">Tours</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./aboutgeo.html">About Georgia</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./contacts.html">Contacts</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+      </div>
+    </div> 
+
+
+    
+    
+         <div class="nav-color desktop-only">
+      <hr>
+      <div class="container">
+        
+            <nav class="n">
+              <ul class="nav-link d-flex text-decoration white">
+                <li>
+                    <a href="./aboutus.html">About Us</a>
+                </li>
+                <li>
+                    <a href="./tours.html">Tours</a>
+                </li>
+                <li>
+                    <a href="./aboutgeo.html">About Georgia</a>
+                </li>
+                <li>
+                    <a href="./contacts.html">Contacs</a>
+                </li>
+              </ul>
+            </nav>  
+            
+      </div>
+      <hr>
+    </div>
+    
+        <section class="container">
+             <div class="horizontal-scroll   mt-5">
+                    <img width="500px" height="400px" src="./tav tbilisi airport.jpg" alt="">
+                    <img width="500px" height="400px" src="./merlin_138493119_dc17f17f-96a2-4487-a9ea-214914926374-superJumbo.webp" alt="">
+                    <img width="500px" height="400px" src="./5.-Mother-of-Kartli-monument-Tbilisi.jpg" alt="">
+                    <img width="500px" height="400px" src="./mtskheta-svetitskhoveli.webp" alt="">
+                    <img width="500px" height="400px" src="./Sky_Mountains_Georgia_Ushguli_Upper_Svaneti_581352_3840x2400.jpg" alt="">
+                    <img width="500px" height="400px" src="./Sky_Mountains_Georgia_Ushguli_Upper_Svaneti_581352_3840x2400.jpg" alt="">
+                    <img width="500px" height="400px" src="./Sky_Mountains_Georgia_Ushguli_Upper_Svaneti_581352_3840x2400.jpg" alt="">
+                </div>
+     <!--   <div id="imageModal" class="modal">
+  <span class="close" id="closeModal">&times;</span>
+  <div class="modal-content" id="modalImageContainer">
+    <img id="modalImage" src="" alt="გაფართოებული სურათი">
+  </div>
+</div> -->  
+
+                <div class="mt-4">
+                    <h3 class="text-white">Tour For Georgia 7 Nights 8 Days</h3>
+                    <div class="d-flex align-items-center flex-wrap mt-4">
+                        <p class="text-white pTours"><img width="30px" src="./src/img/calendar.png">&nbsp;-&nbsp;7 Nights 8 Days</p>
+                        &nbsp;&nbsp;&nbsp;
+                        <p class="text-white pTours"><img width="30px" src="./src/img/placeholder.png">-&nbsp;Tbilisi,Mtskheta,Gori,Kazbegi,Gudauri,Kutaisi,Martvili,Borjomi,Prometheus and Rabati</p>
+                    </div>
+               </div>
+                    
+ <div class="bbb">
+  <div class="mt-4 d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-1 col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12">
+      <h3 class="pTours mt-2">Day 1 - Arrival to Tbilisi</h3>
+    </div>
+    <div class="toggleBtn">
+      <img class="icon plus active" src="./src/img/plus.png" alt="Plus">
+      <img class="icon minus" src="./src/img/minus.png" alt="Minus">
+    </div>
+  </div>
+  <div class="toggle-content" style="display: none;">
+    <p>After arrival in Tbilisi International Airport, once you collect all your luggage and go to 
+       "Arrivals" Section of the Airport, our "Meeter" will meet you in the Airport holding and board with our Company Logo
+        and your Name written on it. She or He will escort you to the vehicle and will take you to your hotel to check-in to 
+        your room and rest for a day to get over the jetlag and gather strength until beginning your adventure.</p>
+  </div>
+</div>
+ <div class="bbb">
+  <div class="mt-4 d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-1 col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12">
+      <h3 class="pTours mt-2">Day 2 - Tbilisi Complete Tour</h3>
+    </div>
+    <div class="toggleBtn">
+      <img class="icon plus active" src="./src/img/plus.png" alt="Plus">
+      <img class="icon minus" src="./src/img/minus.png" alt="Minus">
+    </div>
+  </div>
+  <div class="toggle-content" style="display: none;">
+    <p>                On the following day after you have breakfast in your hotel you will meet the Driver
+                       and Guide in your hotel lobby and starting your tour.The first place to visit will be a Holy Trinity Cathedral,one of the largest orthdox 
+                       Cathedrals in the world.Tour continues to Metekhi church and the monument to King Vakhtang Gorgasali,the legendary founder of Tbilisi.Walk
+                       down to the Rike Park and Cross the peace Bridge.Take cable car from Rike Park to Narikala Fortress to enjoy breathtaking panoramic view 
+                       of the city and statue of Mother Georgia standing above the old Tbilisi.Walk down to the district of Sulphur baths passing by the only 
+                       mosque in Tbilisi.Stroll through the Meidan Square,area full of narrow streets paved with cobble-stone and packed with cozy cafes,wint 
+                       tasting bars,souvenir shops where you can breathe in the living past.Visit Sioni Cathedral ,Anchiskhati Basilica and the clock tower of famous Rezo Gabrichidze Theatre.
+                       Passing freedom square you will continue your road to Rustaveli avenue,where you can admire the local architectural monuments such as Building
+                       of Opera,Rustabeli theater and "Filarmonia" concert hall,also first Gymnasium of Tbilisi and Kashueti Church,later you will head to the different
+                       part of Tbilisi to visit Chronicles Georgia where you can see the pillars depiciting images from Georgia's Past.Later 
+                       you will drive back to the center of the city and go to Mtatsminda Park to ride Funicular to the top of the mountain,where you can 
+                       enjoy the spectacular view of the whole city before heading back to your hotel spend a night and refresh for the following day.</p>
+  </div>
+</div>
+                      
+ <div class="bbb">
+  <div class="mt-4 d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-1 col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12">
+      <h3 class="pTours mt-2">Day 3 - Mtskheta and Gori</h3>
+    </div>
+    <div class="toggleBtn">
+      <img class="icon plus active" src="./src/img/plus.png" alt="Plus">
+      <img class="icon minus" src="./src/img/minus.png" alt="Minus">
+    </div>
+  </div>
+  <div class="toggle-content" style="display: none;">
+    <p>                 After having a Breakfast in your hotel you will meet the driver and 
+                        Guide in your hotel lobby.The tours starts with Jvari Monastry(6th - 7th cc).The most important religious center and an architectural
+                        masterpiece of mediaeval Georgia.Enjoy breathtaking view from the church that stands proud over the city Mtskheta overseeing the 
+                        merging of two of the biggest rivers in Georgia.Mtkvari(Kura) and Aragvi.Passing through the famous souvenir market.
+                        Continue tour to the old Capital town of Georgia - towards Svetithkhoveli Cathedral.After a lunch break you will go to
+                        A medieval fortress on a hill with great views of the Gori city.It dates back to the 13th century and offers a glimpse into 
+                        Georgia's past,with its ruins and a small church.After that tou will visit museum of Stalin which is located in Stalin's hometown,
+                        this museum showcases his life and legacy,including his birth house,personal items,and historical exhibits about his rule.it's a 
+                        significant site for those interested in Soviet history.On the way to gudauri Your stop will be Jhinvali Water reservoir created during
+                        soviet era,promptly continuing to Ananuri complex,a farmer residence of Argveti Dukes.The complex features churches and towers dating back to the 
+                        16-17th centuries.Beautifully overlooking the Jhinvali reservoir.Continue your drive to see the conjuction of two small mountain rivers 
+                        famous for the fact that being different color they still keep their own colors even after merge.After you will be headed to your hotel
+                        in Gudauri.</p>
+  </div>
+</div>
+  <div class="bbb">
+  <div class="mt-4 d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-1 col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12">
+      <h3 class="pTours mt-2">Day 4 - Gudauri and Kazbegi</h3>
+    </div>
+    <div class="toggleBtn">
+      <img class="icon plus active" src="./src/img/plus.png" alt="Plus">
+      <img class="icon minus" src="./src/img/minus.png" alt="Minus">
+    </div>
+  </div>
+  <div class="toggle-content" style="display: none;">
+    <p>                After having a Breakfast in your hotel,you will meet the Driver and Guide in your hotel
+                       lobby,the route will take over the Georgian military Highway up North,towards the border with Russia continuing on the way you will
+                       have a chance to taste the mineral mountain springs in Mleta after which you will drive over the cross pass to Gudauri ski resort,
+                       where you can enjoy the Winter Sports during winter or be more adventurous and experience Paragliding in every season with local
+                       professionals.Afterwards,We will then drive over the Cross Pass and make a short stop at the Soviet-era "People's Friendship" mountain
+                       view point overlooking a deep gorge of Caucasus mountain range and on the way to Town of Stepantsminda (Kazbegi) we will pass by the 
+                       beautiful travertine in Kazbegi national park.After arriving to Kazbegi, we will change our vehicle to a four-wheel drive car to reach
+                       Gergeti Holy Trinity Church located on altitude of 2170 meters,and enjoy breathtaking views of MT Kazbegi before heading back to
+                       your hotel in Tbilisi.</p>
+  </div>
+</div>
+
+ 
+  
+
+<div class="bbb">
+  <div class="mt-4 d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-1 col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12">
+      <h3 class="pTours mt-2">Day 5 - Kutaisi Tour</h3>
+    
+    </div>
+    <div class="toggleBtn">
+      <img class="icon plus active" src="./src/img/plus.png" alt="Plus">
+      <img class="icon minus" src="./src/img/minus.png" alt="Minus">
+    </div>
+  </div>
+  <div class="toggle-content" style="display: none;">
+    <p>               
+                </p>
+  </div>
+</div>
+<div class="bbb">
+  <div class="mt-4 d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-1 col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12">
+      <h3 class="pTours mt-2">Day 6 - Martvili and Prometheus</h3>
+    
+    </div>
+    <div class="toggleBtn">
+      <img class="icon plus active" src="./src/img/plus.png" alt="Plus">
+      <img class="icon minus" src="./src/img/minus.png" alt="Minus">
+    </div>
+  </div>
+  <div class="toggle-content" style="display: none;">
+    <p>               
+                </p>
+  </div>
+</div>
+<div class="bbb">
+  <div class="mt-4 d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-1 col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12">
+      <h3 class="pTours mt-2">Day 7 - Borjomi and Rabati</h3>
+    
+    </div>
+    <div class="toggleBtn">
+      <img class="icon plus active" src="./src/img/plus.png" alt="Plus">
+      <img class="icon minus" src="./src/img/minus.png" alt="Minus">
+    </div>
+  </div>
+  <div class="toggle-content" style="display: none;">
+    <p>               
+                </p>
+  </div>
+</div>
+
+<div class="bbb">
+  <div class="mt-4 d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-1 col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12">
+      <h3 class="pTours mt-2">Day 8 - Bodbe and Sighnaghi</h3>
+    </div>
+    <div class="toggleBtn">
+      <img class="icon plus active" src="./src/img/plus.png" alt="Plus">
+      <img class="icon minus" src="./src/img/minus.png" alt="Minus">
+    </div>
+  </div>
+  <div class="toggle-content" style="display: none;">
+    <p>                After having a breakfast in your hotel,you will meet the Driver and Guide in your 
+                       hotel lobby and depart towards the Kakheti region of Georgia,the cradle of Georgian winemaking.
+                       Our first stop will be in Bodbe monastery complex functioning as a nunnery since 1889, which according to the legend is a burial place
+                       of st.Nino,who coverted Georgia Christianity in the 4th century.Continue to Sighnaghi,the city of love and the Royal Town,one of the crossroads
+                       of the Great Silk Road surrounded by defensive walls 23 towers,After that,you will head to KTW.Kakhetian traditional winemaking preserves
+                       the ancient Georgian winemaking traditions,combining them with modern technologies to offer exeptional wines,stunning and storied
+                       heritage of Georgia - The Cradle of Wine.The company has been learning Kakhian technologies since the first steps of its existence.
+                       it keeps ancient traditions of winemaking and uses clay vessels for preserving the best quality of wine.
+                       Here you can take part in any kind of activities and also taste more than 30 varieties of the best wine produced locally,before
+                       departing back to your hotel in Tbilisi.</p>
+  </div>
+</div>
+<h3 class="mt-4 text-white">Prices Inclusions and Important Notes</h3>
+<div class="d-flex flexWrap gap-3 ">
+  
+  <div class="bbb">
+  <h3 class="mt-4">Prices With</h3>    
+  <hr>
+  <div class="d-flex gap-3 toggleSwitch">
+    
+    <div class="four active">
+      <h3>4*Hotels</h3>
+    </div>
+  
+    <div class="five">
+      <h3>5*Hotels</h3>
+    </div>
+    </div>
+
+    <div class="toggle-p" style="display: block;">
+      <ul class="pTours">
+      <li>SEDAN CAR - 1343$</li>
+      <li>MINIVAN CAR - 954$</li>
+      <li>SPRINTER - 883$</li>
+      <li>BUS - 794$</li>
+      </ul>
+    </div>
+    <div class="toggle-p-five" style="display: none;">
+      <ul class="pTours">
+      <li>SEDAN CAR - 1443$</li>
+      <li>MINIVAN CAR - 1152$</li>
+      <li>SPRINTER - 1079$</li>
+      <li>BUS - 886$</li>
+      </ul>
+    </div>
+
+
+</div>
+
+
+  <div class="bbb">
+    <h3 class="mt-4">Inclusions</h3>    
+    <hr>
+    <ul class="pTours">
+      <li>Hotel Accommodation</li>
+      <li>Breakfast</li>
+      <li>Tours by Private Vehicle</li>
+      <li>Cinese Speaking Guide</li>
+      <li>Airport-Hotel-Airport Transfers</li>
+      <li>Entrance Fees in All Sightseeing Destinations </li>
+      <li>Pick-up from hotel Before Tours</li>
+      <li>Drop-off to Hotel After Tours</li>
+      <li>Entree fees as per your itinerary</li>
+      <li>Travel insurance</li>
+      <li>Bottle of Water</li>
+    </ul>
+  </div>
+  <div class="bbb">
+    <h3 class="mt-4">Important Notes</h3>
+    <hr>
+    <ul class="pTours">
+      <li>Tour package includes 2 airport transfers.(Pick-up and drop-off from the airport) 
+          if more than 2 transfers,it will be extra charge.
+      </li>
+      <li>We are responsible of tourists only after they cross the Georgian Border</li>
+      <li>For reservation of this tour,clients need to send copy of their flight
+          tickets and passports to our email and Make an Advance payment of at latest
+          30% of total amount
+      </li>
+      <li>The package rate doesn't include early check in or late checkout</li>
+      <li>Bank and Money transfer fees are not included in the price lists</li>
+      <li>Company is not responsible for the Force Majour caused by the extreme
+          weather conditions.(i.e heavy snow)
+      </li>
+    </ul>
+  </div>
+</div>
+           <p class=" text-white mt-4 pTours">!!! IF THERE WILL BE A REQUEST FOR LAUNCHS AND DINNERS ADDITIONAL CHARGE PER MEAL WILL BE 25$</p>
+        </section>
+      
+      
+
+<footer class="desktop-only">
+    <div class="container">
+      <div class="downStyle">
+      <nav class="footer_navs">
+        <div class="d-flex justify-content-between align-text-center">
+          <div class="footerPhoto">
+            <a href="./index.html">
+              <img width="120px" src="./src/img/footerlogo.jpg">
+            </a>
+          </div>
+          <div>
+            <ul class="list-unstyled d-flex gap-5">
+              <li class="mt-2">
+                <a href="./aboutus.html">About Us</a>
+              </li>
+              <li class="mt-2">
+                <a href="#">Tours</a>
+              </li>
+              <li class="mt-2">
+                <a href="#">Prices</a>
+              </li>
+             
+              
+            
+            </ul>
+          </div>
+          <div class="d-flex gap-3">
+            <div>
+              <img width="20px" src="./src/img/tik-tok.png">
+            </div>
+            <div>
+              <img width="20px" src="./src/img/instagram (1).png">
+            </div>
+            <div>
+              <img width="20px" src="./src/img/social.png">
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="d-flex mt-5 justify-content-between align-items-center">
+        <div class="">
+          <div class="g_border d-flex align-items-center justify-content-center">
+            <h2 class="align-text-center">Contact Us</h2>
+          </div>
+          
+          <p class="mt-3">Email: info@georest.ge</p>
+          <p>WhatsApp: +79246065230</p>
+          <p>Address: Tbilisi,Marjanishvili N2</p>
+        </div>
+        <div class="d-flex m gap-3">
+          <input class="footer_email" placeholder="Email">
+          <button class="btn-primary" type="sunmit">Subscribe to news</button>
+        </div>
+        
+      </div>
+      <hr class="mt-5 footer_line">
+        <div class="d-flex justify-content-end gap-3">
+          <p>
+            All Rights Reserved © 2019 GeoRest
+          </p>
+         &gt;
+        </div>
+    </div>
+</div>
+</footer></div>
+
+<footer class="response-only">
+  <div class="container mb_down">
+    <div class="footerPhoto">
+      <a href="./index.html">
+        <img width="120px" src="./src/img/footerlogo.jpg">
+      </a>
+    </div>
+    <ul class="list-unstyled mt-5 text-center">
+      <li>
+        <a href="./aboutus.html">About Us</a>
+      </li>
+      <li class="mt-2">
+        <a>Tours</a>
+      </li>
+      <li class="mt-2">
+        <a>Prices</a>
+      </li>
+     
+    
+    </ul>
+    <div class="mt-5">
+      <div class="d-flex justify-content-center">
+        <h2 class="g_border text-center">Contact Us</h2>
+      </div>
+      <p class="mt-3 text-center">Email: info@georest.ge</p>
+      <p class="text-center">WhatsApp: +79246065230</p>
+      <p class="text-center">Address: Tbilisi,Marjanishvili N2</p>
+    </div>
+     <!-- Subscribe form for mobile -->
+     <div class="mt-5 mobile_emailborder d-flex flex-wrap justify-content-center align-items-center gap-3">
+      <input class="mb_footer_email" placeholder="Email">
+      <button class="btn-primaryRes" type="sunmit">Subscribe to news</button>
+    </div>
+
+    <!-- Social media icons -->
+    <div class="d-flex mt-5 gap-3 justify-content-center">
+      <div><img width="20px" src="./src/img/tik-tok.png" alt="TikTok"></div>
+      <div><img width="20px" src="./src/img/instagram (1).png" alt="Instagram"></div>
+      <div><img width="20px" src="./src/img/social.png" alt="Social Media"></div>
+    </div>
+    <div>
+      <hr class="mt-5 mbfooter_line">
+    </div>
+    <div>
+      <p>
+        All Rights Reserved © 2019 GeoRest
+      </p>
+     
+    </div>
+  </div>
+
+</footer>
+
+<script src="tours.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -3,26 +3,131 @@ body {
     margin: 0;
     padding: 0;
 }
+#color_bg {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+    url('img/Sky_Mountains_Georgia_Ushguli_Upper_Svaneti_581352_3840x2400.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.bbb {
+    padding-bottom: 20px;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+    background: #d6d5d5;
+    border: 2px solid #191A23;
+    box-shadow: 0px 5px #014288;
+    border-radius: 10px;
+    margin-top: 16px;
+    width: 100% !important;
+}
+.horizontal-scroll {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    gap: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    color: #014288;
+
+    /* Auto-snap */
+    scroll-snap-type: x mandatory;
+}
+
+.horizontal-scroll > * {
+    scroll-snap-align: start;
+}
+
+/* Custom scrollbar (Chrome, Edge) */
+.horizontal-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-track {
+    background: #e0e6ef;
+    border-radius: 10px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb {
+    background: #014288;
+    border-radius: 10px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb:hover {
+    background: #013066;
+}
+.four.active,
+.five.active {
+    color: red;
+    cursor: pointer;
+}
+
+
+.four {
+    cursor: pointer;
+}
+.five{
+    cursor: pointer;
+}
+
+.icon {
+    display: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.icon.active {
+    display: inline-block;
+}
+hr {
+  border: none;
+  height: 3px;
+  background-color: white;
+  width: 100%;
+}
+
+
 .nav-link{
-    list-style: none;
-    font-family:Georgia, 'Times New Roman', Times, serif; 
+    list-style: none;   
     gap: 30px;
 }
-.nav-link a{
-    font-size: larger;
-    font-weight: bold;     
+
+.nav-link a {
+  position: relative;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: larger;
+  padding: 5px 0;
+  font-family: 'Space Grotesk';
 }
-.nav-link a:hover{
-    color: black;
+
+.nav-link a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: white;
+  transition: width 0.3s ease-in-out;
 }
-.nav-padding{
-    padding: 26px 12px 8px;
+
+.nav-link a:hover::after {
+  width: 100%;
 }
+
+
 .nav-color {
-    background-color: #00496b;
+    backdrop-filter: blur(50px);
     color: white;    
     width: 100%; 
-    height: 80px;
+
 }
 .btn-primary{
     padding: 20px;
@@ -43,9 +148,7 @@ body {
     font-weight: bold; 
 }
 
-.btn-primary:hover {
-    background-color: #012333;
-}
+
 .text-decoration a{
     text-decoration: none;
 }
@@ -70,6 +173,7 @@ body {
     .response-only {
         display: block;
     }
+   
 }
 
 
@@ -206,7 +310,7 @@ color: white;
     font-weight: 500;
     font-size: 60px;
     line-height: 77px;
-    color: #000000;
+    color: white;
 }
 .banner_text {
     font-family: 'Space Grotesk';
@@ -214,7 +318,7 @@ color: white;
     font-weight: 400;
     font-size: 20px;
     line-height: 28px;
-    color: #000000;
+    color: white;
 }
 .bgContact{
     background-image: url("../src/img/91979036_100273504974638_1919195476108771328_n.jpg");
@@ -272,7 +376,7 @@ color: white;
   .step-title {
     font-size: 16px;
     font-weight: bold;
-    color: #222;
+    color: white;
     margin-bottom: 5px;
   }
   .step-description {
@@ -302,13 +406,21 @@ color: white;
   }
   .vv{
     font-family: 'Space Grotesk';
+    font-weight: bold;
+    
+    
+  }
+  .kk{
+    font-family: 'Space Grotesk';
+    font-weight: bold;
+    color: white;
   }
   .nn{
     font-family: 'Space Grotesk';
     font-size: 40px;
     font-weight: bolder;
     color: white;
-    margin-right: 20px;
+   
   }
   .Bold{
     font-weight: bold;
@@ -318,8 +430,9 @@ color: white;
     height: 300px;
     border-radius: 10px;
     max-width: 100%;
-    border: 1px solid black;
+ 
     padding: 20px 10px 10px 10px;
+    background-color: white;
   }
   .historyBox li{
     font-family:Georgia, 'Times New Roman', Times, serif; 
@@ -338,6 +451,7 @@ color: white;
     padding: 10px;
     border-radius: 10px;
     padding: 30px 10px 10px 10px;
+    background-color: white;
   }
   .language-switcher {
     margin: 20px;
@@ -347,7 +461,7 @@ color: white;
     position: relative;
     display: inline-block;
     width: 150px; /* Increased to accommodate the arrow */
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 10px;
     padding: 6px;
     
@@ -356,7 +470,7 @@ color: white;
     position: relative;
     display: inline-block;
     width:62px; /* Increased to accommodate the arrow */
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 10px;
     padding: 6px;
     
@@ -370,6 +484,7 @@ color: white;
     align-items: center; /* Aligns text and flag vertically */
     justify-content: space-between; /* Spaces out the flag, text, and arrow */
     width: 100%;
+    color: white;
 }
 .dropbtnRes {
     background: none;
@@ -475,6 +590,9 @@ color: white;
     border: none;
     font-family: monospace;
     font-weight:bolder;
+}
+.headerMT{
+    margin-top: 120px;
 }
 .slider .dots{
     position: absolute;
@@ -710,7 +828,91 @@ border-radius: 10px;
     font-weight: bold;
     color: black;
 }
+.main-news-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    max-width: 900px;
+    height: 388px;
+}
 
+.main-news-card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+    padding: 20px;
+    width: 100%;
+    z-index: 5;
+}
+
+.category {
+    background-color: #00496b;
+    color: white;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
+.news-list {
+    margin-top: 10px;
+}
+
+.news-item {
+    display: flex;
+    align-items: center;
+    background: rgb(239, 239, 239);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.news-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.main-news-card img {
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.main-news-card h3, 
+.main-news-card .category, 
+.main-news-card .time {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.main-news-card.show h3, 
+.main-news-card.show .category, 
+.main-news-card.show .time {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.news-item {
+    transition: background-color 0.5s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.news-item.active {
+    background-color: #00496b;
+    transform: scale(1.05);
+    border-radius: 10px;
+    color:white;
+  
+}
 
 
 
