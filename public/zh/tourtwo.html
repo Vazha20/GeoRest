@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="x-icon" href="../src/img/logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../src/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>GeoRest</title>
+</head>
+<body id="color_bg" class="glass-effect">
+
+  <div class="container text-center loading" id="loading-spinner" style="display: none;">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only"></span>
+    </div>
+  </div>
+
+  <div id="page-content">
+    <div class="desktop-only">
+        <div class="container mt-2 d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-social">
+            <a href="../zh/index.html" class="d-flex align-items-center"><img width="120px" src="../src/img/logo.png"></a>
+            <div class="d-flex gap-3">
+                <div>
+                    <a><img width="20px" src="../src/img/tik-tok.png"></a>  
+                </div>
+                <div>
+                    <a><img width="20px" src="../src/img/instagram (1).png"></a>      
+                </div>
+                <div>
+                    <a><img width="20px" src="../src/img/social.png"></a>     
+                </div>
+            </div>
+            
+            </div>
+            
+            <div class="d-flex align-items-center gap-3 text-decoration">
+              <div class="language-switcher">
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown()">
+                        <img src="../src/img/china.png" alt="English" title="Select Language"> Chinese
+                        <span class="dropdown-arrow">&#9662;</span> <!-- Dropdown arrow icon -->
+                    </button>
+                    <div class="dropdown-content" id="languageDropdown">
+                        <a href="../tourtwo.html" onclick="switchLanguage(event)">
+                            <img src="../src/img/united-kingdom.png" alt="Georgian"> English
+                        </a>
+                        <a href="../ru/tourtwo.html" onclick="switchLanguage(event)">
+                            <img src="../src/img/icons8-russian-federation-96.png" alt="Russian"> Russian
+                        </a>
+                        <a href="../zh/tourtwo.html" onclick="switchLanguage(event)">
+                          <img src="../src/img/icons8-georgia-96.png" alt="Chinese"> ქართული
+                      </a>
+                    </div>
+                </div>
+            </div>
+            
+            
+              
+            </div>
+        </div>
+      </div>
+      
+
+      
+      <div class="response-only">
+        <div class="container">
+          
+          <nav class="navbar navbar-expand-lg fixed-top bg-white">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+                <!-- Burger Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <!-- Logo -->
+                <a class="navbar-brand" href="../zh/index.html">&nbsp;&nbsp;<img width="70px" height="70px" src="../src/img/logo.png" alt="logo"></a>
+        
+                <!-- Language Switcher -->
+                <div class="d-flex align-items-center gap-3">
+                    <div>
+                        <div>
+                          <button class="dropbtn" onclick="toggleDropdownRes()">
+                            <img src="../src/img/china.png" alt="English" title="Select Language">
+                          </button>
+                          <div class="dropdown-content" id="languageMenu">
+                            <a href="../tourtwo.html" onclick="switchLanguageRes(event)">
+                                <img src="../src/img/united-kingdom.png" alt="Georgian"> English <!-- Updated to Georgian -->
+                            </a>
+                            <a href="../ru/tourtwo.html" onclick="switchLanguageRes(event)">
+                                <img src="../src/img/icons8-russian-federation-96.png" alt="Russian"> Russian
+                            </a>
+                            <a href="../ka/tourtwo.html" onclick="switchLanguageRes(event)">
+                                <img src="../src/img/icons8-georgia-96.png" alt="Chinese"> ქართული
+                            </a>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Navbar Items -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="../zh/aboutus.html">关于我们</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../zh/tours.html">旅游团</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../zh/aboutgeo.html">格鲁吉亚</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../zh/contacts.html">联系</a></li>                    </ul>
+                </div>
+            </div>
+        </nav>
+      </div>
+    </div> 
+
+
+    
+    
+         <div class="nav-color desktop-only">
+      <hr>
+      <div class="container">
+        
+                 <nav class="n">
+              <ul class="nav-link d-flex text-decoration white">
+                <li>
+                    <a  href="../zh/aboutus.html">关于我们</a>
+                </li>
+                <li>
+                    <a  href="../zh/tours.html">旅游团</a>
+                </li>
+                <li>
+                    <a  href="../zh/aboutgeo.html">格鲁吉亚</a>
+                </li>
+                <li>
+                    <a  href="../zh/contacts.html">联系</a>
+                </li>
+              </ul>
+            </nav>  
+      </div>
+      <hr>
+    </div>
+    
+       <section class="container">
+          <div class="marginTop response-only"></div>
+             <div class="horizontal-scroll   mt-5">
+                    <img width="500px" height="400px" src="../src/img/200211131604-georgia-skiing-gudauri-skier-on-slopes.jpg" alt="">
+                    <img width="500px" height="400px" src="../src/img/2f697240931df0025491dead865fd6e5.jpg" alt="">
+                    <img width="500px" height="400px" src="../src/img/ea.jpg" alt="">
+                    <img width="500px" height="400px" src="../src/img/shardeni.jpg" alt="">
+                    <img width="500px" height="400px" src="../src/img/mtkvari.jpeg" alt="">
+                    <img width="500px" height="400px" src="../src/img/wine6.jpg" alt="">
+                    <img width="500px" height="400px" src="../src/img/Otium Image 2.jpg" alt="">
+                </div>
+     <!--   <div id="imageModal" class="modal">
+  <span class="close" id="closeModal">&times;</span>
+  <div class="modal-content" id="modalImageContainer">
+    <img id="modalImage" src="" alt="გაფართოებული სურათი">
+  </div>
+</div> -->  
+
+                <div class="mt-4">
+                    <h3 class="text-white">格鲁吉亚之旅：5晚6天</h3>
+                    <div class="d-flex align-items-center flex-wrap mt-4">
+                        <p class="text-white pTours"><img width="30px" src="../src/img/calendar.png">&nbsp;-&nbsp;5晚6天</p>
+                        &nbsp;&nbsp;&nbsp;
+                        <p class="text-white pTours"><img width="30px" src="../src/img/placeholder.png">-&nbsp;Tbilisi,Mtskheta,Ananuri,Kazbegi,Gudauri,Sighnaghi,Kvareli,Gori</p>
+                    </div>
+               </div>
+                    
+ <div class="bbb">
+  <div class="mt-4 d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-1 col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12">
+    <h3 class="pTours mt-2">第一天 - 第比利斯</h3>
+
+    </div>
+    <div class="toggleBtn">
+      <img class="icon plus active" src="../src/img/plus.png" alt="Plus">
+      <img class="icon minus" src="../src/img/minus.png" alt="Minus">
+    </div>
+  </div>
+  <div class="toggle-content" style="display: none;">
+   <ul>
+    <li>抵达第比利斯</li>
+    <li>与中文导游会面，在餐厅享用晚餐</li>
+    <li>前往酒店入住，第比利斯酒店过夜</li>    
+</ul>
+  </div>
+</div>
+
+                      
+ <div class="bbb">
+  <div class="mt-4 d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-1 col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12">
+<h3 class="pTours mt-2">第2天 - 姆茨赫塔 阿纳努里 卡兹别吉</h3>
+    </div>
+    <div class="toggleBtn">
+      <img class="icon plus active" src="../src/img/plus.png" alt="Plus">
+      <img class="icon minus" src="../src/img/minus.png" alt="Minus">
+    </div>
+  </div>
+  <div class="toggle-content" style="display: none;">
+   <ul>
+    <li>在酒店享用早餐</li>
+    <li>与中文导游会面</li>
+    <li>参观贾瓦里修道院</li>   
+    <li>参观斯维蒂茨霍韦利大教堂</li>    
+    <li>在餐厅享用午餐</li>  
+    <li>前往阿纳努里</li>      
+    <li>在金瓦利水库拍照</li>  
+    <li>在格鲁吉亚—俄罗斯友谊纪念碑拍照</li>  
+    <li>前往卡兹别吉</li>  
+    <li>在餐厅享用晚餐</li> 
+    <li>在卡兹别吉或古道里酒店过夜</li>    
+</ul>
+
+  </div>
+</div>
+  <div class="bbb">
+  <div class="mt-4 d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-1 col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12">
+    <h3 class="pTours mt-2">第3天 - 卡兹别格 古道里 第比利斯</h3>
+
+    </div>
+    <div class="toggleBtn">
+      <img class="icon plus active" src="../src/img/plus.png" alt="Plus">
+      <img class="icon minus" src="../src/img/minus.png" alt="Minus">
+    </div>
+  </div>
+  <div class="toggle-content" style="display: none;">
+   <ul>
+    <li>在酒店享用早餐</li>
+    <li>与中文导游会面</li>
+    <li>乘坐四驱车（吉普车）享受格尔格蒂山顶越野探险</li>
+    <li>三一教堂（视天气情况而定）</li>
+    <li>参观Rooms酒店（不含饮料或食物，客人可现场点餐并付款）</li>
+    <li>在餐厅享用午餐</li>
+    <li>前往古道里（32.4 公里 / 1 小时）</li>
+    <li>乘坐Gobi缆车往返游玩（如缆车无法运营，将退款或提供替代方案）</li>
+    <li>前往第比利斯（121 公里 / 2.40 小时）</li>
+    <li>在格鲁吉亚纪事雕塑停留拍照</li>
+    <li>在餐厅享用晚餐</li>
+    <li>返回酒店入住，第比利斯过夜</li>
+</ul>
+
+  </div>
+</div>
+ <div class="bbb">
+  <div class="mt-4 d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-1 col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12">
+<h3 class="pTours mt-2">第4天 - 锡格纳吉 克瓦雷利 第比利斯</h3>
+    </div>
+    <div class="toggleBtn">
+      <img class="icon plus active" src="../src/img/plus.png" alt="Plus">
+      <img class="icon minus" src="../src/img/minus.png" alt="Minus">
+    </div>
+  </div>
+  <div class="toggle-content" style="display: none;">
+ <ul>
+    <li>在酒店享用早餐</li>
+    <li>与中文导游会面</li>
+    <li>前往锡格纳吉</li>
+    <li>参观博德贝圣尼诺修道院</li>
+    <li>参观锡格纳吉城墙</li>
+    <li>在餐厅享用午餐</li>
+    <li>前往克瓦雷利（61.6 公里 / 1.20 小时）</li>
+    <li>参观克瓦雷利葡萄酒洞，包括品酒，然后返回第比利斯（134 公里 / 2.40 小时）</li>
+    <li>在餐厅享用晚餐</li>
+    <li>返回酒店</li>
+    <li>在第比利斯酒店过夜</li>
+</ul>
+
+  </div>
+</div>
+ <div class="bbb">
+  <div class="mt-4 d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-1 col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12">
+<h3 class="pTours mt-2">第 5 天 - 戈里 乌普利斯齐赫 第比利斯</h3>
+    </div>
+    <div class="toggleBtn">
+      <img class="icon plus active" src="../src/img/plus.png" alt="Plus">
+      <img class="icon minus" src="../src/img/minus.png" alt="Minus">
+    </div>
+  </div>
+  <div class="toggle-content" style="display: none;">
+<ul>
+    <li>在酒店享用早餐</li>
+    <li>与中文导游会面</li>
+    <li>前往戈里 (90 公里 / 1 小时 30 分钟) 参观斯大林博物馆</li>
+    <li>在餐厅午餐，参观乌普利斯齐赫洞穴</li>
+    <li>返回第比利斯</li>
+    <li>参观三一大教堂</li>
+    <li>参观梅特基教堂</li>
+    <li>漫步沙尔德尼街</li>
+    <li>在餐厅享用晚餐，返回酒店</li>
+    <li>第比利斯酒店过夜</li>
+</ul>
+
+  </div>
+</div>
+  
+
+<div class="bbb">
+  <div class="mt-4 d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-1 col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12">
+<h3 class="pTours mt-2">第6天 - 第比利斯出发</h3>
+
+    
+    </div>
+    <div class="toggleBtn">
+      <img class="icon plus active" src="../src/img/plus.png" alt="Plus">
+      <img class="icon minus" src="../src/img/minus.png" alt="Minus">
+    </div>
+  </div>
+  <div class="toggle-content" style="display: none;">
+ <ul>
+    <li>在酒店享用早餐</li>
+    <li>与中文导游会面</li>
+    <li>停留在和平桥</li>
+    <li>乘坐缆车参观纳里卡拉堡垒（往返）</li>
+    <li>拍照停留在格鲁吉亚母亲像</li>
+    <li>拍照停留在硫磺浴</li>
+    <li>在餐厅享用午餐，在东点购物</li>
+    <li>前往机场登机离开</li>
+</ul>
+
+  </div>
+</div>
+<h3 class="mt-4 text-white">Prices Inclusions and Important Notes</h3>
+<div class="d-flex flexWrap gap-3 ">
+  
+
+
+
+  <div class="bbb">
+  <h3 class="mt-4">价格包含</h3>    
+  <hr>
+  <div class="d-flex gap-3 toggleSwitch">
+    
+    <div class="four active">
+  <h3>单人间</h3>
+</div>
+
+<div class="five">
+  <h3>双人间</h3>
+</div>
+
+    </div>
+
+    <div class="toggle-p" style="display: block;">
+   <ul class="pTours">
+  <li>15 + 1 人 - 600美元</li>
+  <li>20 + 1 人 - 560美元</li>
+  <li>25 + 1 人 - 530美元</li>
+  <li>30 + 1 人 - 515美元</li>
+  <li>35 + 1 人 - 505美元</li>
+</ul>
+
+    </div>
+    <div class="toggle-p-five" style="display: none;">
+   <ul class="pTours">
+  <li>15 + 1 人 - 495美元</li>
+  <li>20 + 1 人 - 450美元</li>
+  <li>25 + 1 人 - 425美元</li>
+  <li>30 + 1 人 - 410美元</li>
+  <li>35 + 1 人 - 405美元</li>
+</ul>
+
+    </div>
+
+
+</div>
+    <div class="bbb">
+ <h3 class="mt-4">价格包含</h3>
+  
+  <hr>
+  
+
+    <div>
+   <ul class="pTours">
+  <li>舒适大巴交通</li>
+  <li>酒店住宿：第4晚在第比利斯；第1晚在卡兹别吉（酒店：Iveria Inn 或同类；Intourist Kazbegi / Gudauri Inn）</li>
+  <li>全程中文导游陪同</li>
+  <li>所有列出的景点门票</li>
+  <li>所有列出的午餐和晚餐</li>
+  <li>Kvareli 品酒（2 种酒）</li>
+  <li>每人每天 1 瓶 0.5 升水</li>
+  <li>单人房 1 次免费住宿</li>
+</ul>
+
+    </div>
+    
+
+
+</div>
+  <div class="bbb">
+   <h3 class="mt-4">关于行程</h3>
+
+    <hr>
+<p class="pTours">
+    深入探索格鲁吉亚传统酿酒的核心，欣赏从神奇山谷到壮丽山脉的迷人自然风光，感受历史的重现，聆听由建在岩石中的堡垒、修道院和城镇所讲述的历史故事。
+    游览格鲁吉亚就像参观主题公园，每一天都有新的体验和新的感受。我们的小团体格鲁吉亚之旅将向您证明，环绕这个高加索国家的传说和神话都是真实的。好吧...
+</p>
+
+  </div>
+</div>
+<p class="text-white mt-4 pTours">!!! 如果需要午餐和晚餐，每餐将收取额外费用25美元</p>
+        </section>
+      
+
+
+<footer class="desktop-only">
+    <div class="container">
+      <div class="downStyle">
+      <nav class="footer_navs">
+        <div class="d-flex justify-content-between align-text-center">
+          <div class="footerPhoto">
+            <a href="../zh/index.html">
+              <img width="120px" src="../src/img/footerlogo.jpg">
+            </a>
+          </div>
+          <div>
+            <ul class="list-unstyled d-flex gap-5">
+              <li class="mt-2">
+                <a href="../zh/aboutus.html">关于我们</a>
+              </li>
+              <li class="mt-2">
+                <a href="../zh/tours.html">旅游</a>
+              </li>
+              <li class="mt-2">
+                <a href="../zh/aboutgeo.html">格鲁吉亚</a>
+              </li>
+             
+              
+            
+            </ul>
+          </div>
+          <div class="d-flex gap-3">
+            <div>
+              <img width="20px" src="../src/img/tik-tok.png">
+            </div>
+            <div>
+              <img width="20px" src="../src/img/instagram (1).png">
+            </div>
+            <div>
+              <img width="20px" src="../src/img/social.png">
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="d-flex mt-5 justify-content-between align-items-center">
+        <div class="">
+          <div class="g_border d-flex align-items-center justify-content-center">
+            <h2 class="align-text-center">联系我们</h2>
+          </div>
+          
+          <p class="mt-3">Email: inforest44@gmail.com</p>
+          <p>WhatsApp: +79246065230</p>
+          <p>电话: +995597960707</p>
+          <p>地址: Tbilisi,Marjanishvili N2</p>
+        </div>
+        <div class="d-flex m gap-3">
+          <input class="footer_email" placeholder="Email">
+          <button class="btn-primary" type="sunmit">订阅新闻</button>
+        </div>
+        
+      </div>
+      <hr class="mt-5 footer_line">
+        <div class="d-flex justify-content-end gap-3">
+          <p>
+         版权所有 © 2019 GeoRest
+          </p>
+         >
+        </div>
+    </div>
+</div>
+
+</footer>
+<footer class="response-only">
+  <div class="container mb_down">
+    <div class="footerPhoto">
+      <a href="../zh/index.html">
+        <img width="120px" src="../src/img/footerlogo.jpg">
+      </a>
+    </div>
+    <ul class="list-unstyled mt-5 text-center">
+      <li>
+        <a href="../zh/aboutus.html">关于我们</a>
+      </li>
+      <li class="mt-2">
+        <a href="../zh/tours.html">旅游团</a>
+      </li>
+      <li class="mt-2">
+        <a href="../zh/aboutgeo.html">P格鲁吉亚</a>
+      </li>
+     
+    
+    </ul>
+    <div class="mt-5">
+      <div class="d-flex justify-content-center">
+        <h2 class="g_border text-center">联系我们</h2>
+      </div>
+      <p class="mt-3 text-center">Email: info@georest.ge</p>
+      <p class="text-center">WhatsApp: +79246065230</p>
+      <p class="text-center">电话: +995597960707</p>
+      <p class="text-center">地址: Tbilisi,Marjanishvili N2</p>
+    </div>
+     <!-- Subscribe form for mobile -->
+     <div class="mt-5 mobile_emailborder d-flex flex-wrap justify-content-center align-items-center gap-3">
+      <input class="mb_footer_email" placeholder="Email">
+      <button class="btn-primaryRes" type="sunmit">订阅新闻</button>
+    </div>
+
+    <!-- Social media icons -->
+    <div class="d-flex mt-5 gap-3 justify-content-center">
+      <div><img width="20px" src="../src/img/tik-tok.png" alt="TikTok"></div>
+      <div><img width="20px" src="../src/img/instagram (1).png" alt="Instagram"></div>
+      <div><img width="20px" src="../src/img/social.png" alt="Social Media"></div>
+    </div>
+    <div>
+      <hr class="mt-5 mbfooter_line">
+    </div>
+    <div>
+      <p>
+        版权所有 © 2019 GeoRest
+      </p>
+     
+    </div>
+  </div>
+
+</footer>
+<script src="../language.js"></script>
+<script src="../tours.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>

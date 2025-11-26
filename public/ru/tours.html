@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" type="x-icon" href="./src/img/logo.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>GeoRest</title>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="x-icon" href="../src/img/logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../src/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>GeoRest</title>
 </head>
-<body id="color_bg">
-  
+<body id="color_bg" class="glass-effect">
+
+  <div class="container text-center loading" id="loading-spinner" style="display: none;">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only"></span>
+    </div>
+  </div>
+
+  <div id="page-content">
     <div class="desktop-only">
         <div class="container mt-2 d-flex justify-content-between align-items-center">
             <div class="d-flex align-items-center gap-social">
-            <a href="./index.html" class="d-flex align-items-center"><img width="120px" src="./src/img/logo.png"></a>
+            <a href="../ru/index.html" class="d-flex align-items-center"><img width="120px" src="../src/img/logo.png"></a>
             <div class="d-flex gap-3">
                 <div>
-                    <a><img width="20px" src="./src/img/tik-tok.png"></a>  
+                    <a><img width="20px" src="../src/img/tik-tok.png"></a>  
                 </div>
                 <div>
-                    <a><img width="20px" src="./src/img/instagram (1).png"></a>      
+                    <a><img width="20px" src="../src/img/instagram (1).png"></a>      
                 </div>
                 <div>
-                    <a><img width="20px" src="./src/img/social.png"></a>     
+                    <a><img width="20px" src="../src/img/social.png"></a>     
                 </div>
             </div>
             
@@ -32,18 +39,18 @@
               <div class="language-switcher">
                 <div class="dropdown">
                     <button class="dropbtn" onclick="toggleDropdown()">
-                        <img src="./src/img/united-kingdom.png" alt="English" title="Select Language"> English
+                        <img src="../src/img/icons8-russian-federation-96.png" alt="English" title="Select Language"> Russian
                         <span class="dropdown-arrow">&#9662;</span> <!-- Dropdown arrow icon -->
                     </button>
                     <div class="dropdown-content" id="languageDropdown">
-                        <a href="/ka/contacts.html" onclick="switchLanguage(event)">
-                            <img src="./src/img/icons8-georgia-96.png" alt="Georgian"> Georgian
+                        <a href="../tours.html" onclick="switchLanguage(event)">
+                            <img src="../src/img/united-kingdom.png" alt="English"> English
                         </a>
-                        <a href="/ru/contacts.html" onclick="switchLanguage(event)">
-                            <img src="./src/img/icons8-russian-federation-96.png" alt="Russian"> Russian
+                        <a href="../ka/tours.html" onclick="switchLanguage(event)">
+                            <img src="../src/img/icons8-georgia-96.png" alt="ქართული"> ქართული
                         </a>
-                        <a href="/zh/contacts.html" onclick="switchLanguage(event)">
-                          <img src="./src/img/china.png" alt="Chinese"> Chinese
+                        <a href="../zh/tours.html" onclick="switchLanguage(event)">
+                          <img src="../src/img/china.png" alt="Chinese"> Chinese
                       </a>
                     </div>
                 </div>
@@ -54,6 +61,8 @@
             </div>
         </div>
       </div>
+      
+
       
       <div class="response-only">
         <div class="container">
@@ -67,26 +76,26 @@
                 </button>
         
                 <!-- Logo -->
-                 <a class="navbar-brand" href="./index.html">&nbsp;&nbsp;<img width="70px" height="70px" src="./src/img/logo.png" alt="logo"></a>
+                <a class="navbar-brand" href="../ru/index.html">&nbsp;&nbsp;<img width="70px" height="70px" src="../src/img/logo.png" alt="logo"></a>
         
                 <!-- Language Switcher -->
                 <div class="d-flex align-items-center gap-3">
                     <div>
                         <div>
                           <button class="dropbtn" onclick="toggleDropdownRes()">
-                            <img src="./src/img/united-kingdom.png" alt="English" title="Select Language">
-                        </button>
-                        <div class="dropdown-content" id="languageMenu">
-                            <a href="/ka/contacts.html" onclick="switchLanguageRes(event)">
-                                <img src="./src/img/icons8-georgia-96.png" alt="Georgian"> Georgian <!-- Updated to Georgian -->
+                            <img src="../src/img/icons8-russian-federation-96.png" alt="English" title="Select Language">
+                          </button>
+                          <div class="dropdown-content" id="languageMenu">
+                            <a href="../tours.html" onclick="switchLanguageRes(event)">
+                                <img src="../src/img/united-kingdom.png" alt="English"> English 
                             </a>
-                            <a href="/ru/contacts.html" onclick="switchLanguageRes(event)">
-                                <img src="./src/img/icons8-russian-federation-96.png" alt="Russian"> Russian
+                            <a href="../ka/tours.html" onclick="switchLanguageRes(event)">
+                                <img src="../src/img/icons8-georgia-96.png" alt="ქართული"> ქართული
                             </a>
-                            <a href="/zh/contacts.html" onclick="switchLanguageRes(event)">
-                                <img src="./src/img/china.png" alt="Chinese"> Chinese
+                            <a href="../zh/tours.html" onclick="switchLanguageRes(event)">
+                                <img src="../src/img/china.png" alt="Chinese"> Chinese
                             </a>
-                            </div>
+                          </div>
                         </div>
                     </div>
                 </div>
@@ -94,65 +103,61 @@
                 <!-- Navbar Items -->
                 <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
                     <ul class="navbar-nav">
-                       <li class="nav-item"><a class="nav-link" href="./aboutus.html">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./tours.html">Tours</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./aboutgeo.html">About Georgia</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./contacts.html">Contacts</a></li>
-                    </ul>
+                        <li class="nav-item"><a class="nav-link" href="../ru/aboutus.html">О нас</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../ru/tours.html">Туры</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../ru/aboutgeo.html">Грузия</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../ru/contacts.html">Контакты</a></li>                    </ul>
                 </div>
             </div>
         </nav>
-        
-        </div>
+      </div>
     </div> 
 
 
     
     
-   
-     <div class="nav-color desktop-only">
+         <div class="nav-color desktop-only">
       <hr>
       <div class="container">
         
-            <nav class="n">
+                 <nav class="n">
               <ul class="nav-link d-flex text-decoration white">
                 <li>
-                    <a  href="./aboutus.html">About Us</a>
+                    <a  href="../ru/aboutus.html">О нас</a>
                 </li>
                 <li>
-                    <a  href="./tours.html">Tours</a>
+                    <a  href="../ru/tours.html">Туры</a>
                 </li>
                 <li>
-                    <a  href="./aboutgeo.html">About Georgia</a>
+                    <a  href="../ru/aboutgeo.html">Грузия</a>
                 </li>
                 <li>
-                    <a  href="./contacts.html">Contacs</a>
+                    <a  href="../ru/contacts.html">Контакты</a>
                 </li>
               </ul>
             </nav>  
-            
       </div>
       <hr>
     </div>
     
     <div class="container">
-         <h3 class="mt-3 text-center nn btn-primary desktop-only">Tours</h3>
-         <h3 class="response-only nn marginTop text-center btn-primary">Tours</h3>
+         <h3 class="mt-3 text-center nn btn-primary desktop-only">Туры</h3>
+         <h3 class="response-only nn marginTop text-center btn-primary">Туры</h3>
       </div>
   
 
          <section class="desktop-only container">
             <div class="mt-5 gap-5 d-flex posRelative">
                 <div>
-                    <img width="500px" height="400px" src="./src/img/tourone.jpg" alt="">
+                    <img width="500px" height="400px" src="../src/img/tourone.jpg" alt="">
                 </div>
                 <div>
-                    <h3 class="text-white">Tour For Georgia 5 Nights 6 Days</h3>
+                    <h3 class="text-white">Тур по Грузии на 5 ночей и 6 дней</h3>
                     <div class="d-flex align-items-center">
-                        <p class="text-white"><img width="30px" src="./src/img/calendar.png"> - 5 Nights 6 Days</p>
-                        <p class="text-white"><img width="40px" src="./src/img/placeholder.png">- Tbilisi,Mtskheta,Gori,Kazbegi,Gudauri and region of Kakheti</p>
+                        <p class="text-white"><img width="30px" src="../src/img/calendar.png"> - 5 ночей 6 дней</p>
+                        <p class="text-white"><img width="40px" src="../src/img/placeholder.png">- Тбилиси, Мцхета, Гори, Казбеги, Гудаури и регион Кахети</p>
                     </div>
-                    <button class="btn-primary">Read More...</button>
+                    <a href="../ru/tourone.html"><button class="btn-primary">Читать дальше...</button></a>
                 </div>
                 
                
@@ -161,16 +166,16 @@
         <section class="response-only">
             <div class="text-center mt-3">
                 <div>
-                    <img width="264px" height="264px" src="./src/img/tourone.jpg" alt="">
+                    <img width="264px" height="264px" src="../src/img/tourone.jpg" alt="">
                    
                 </div>
-                <h3 class="mt-3 text-white">Tour For Georgia 5 Nights 6 Days</h3>
+                <h3 class="mt-3 text-white">Тур по Грузии на 5 ночей и 6 дней</h3>
                 <div class="d-flex align-items-center justify-content-center flex-wrap mt-4">
-                    <p class="text-white"><img width="30px" src="./src/img/calendar.png"> - 5 Nights 6 Days</p>
-                    <p class="text-white"><img width="40px" src="./src/img/placeholder.png"> - Tbilisi,Mtskheta,Gori,Kazbegi,Gudauri and region of Kakheti</p>
+                    <p class="text-white"><img width="30px" src="../src/img/calendar.png"> - 5 ночей 6 дней</p>
+                    <p class="text-white"><img width="40px" src="../src/img/placeholder.png"> - Тбилиси, Мцхета, Гори, Казбеги, Гудаури и регион Кахети</p>
                 </div>
                 <div class="justify-content-center d-flex">
-                  <button class="btn-primary">Read More...</button>
+                    <a href="../ru/tourone.html"><button class="btn-primary">Читать дальше...</button></a>
                 </div>
             </div>
         </section>
@@ -182,15 +187,15 @@
         <section class="desktop-only container">
             <div class="mt-5 gap-5 d-flex posRelative">
                 <div>
-                    <img width="500px" height="400px" src="./src/img/tourtwo.jpg" alt="">
+                    <img width="500px" height="400px" src="../src/img/tourtwo.jpg" alt="">
                 </div>
                 <div>
-                    <h3 class="text-white">Tour For Georgia 5 Nights 6 Days</h3>
+                    <h3 class="text-white">Тур по Грузии на 5 ночей и 6 дней</h3>
                     <div class="d-flex align-items-center gap-3">
-                        <p class="text-white"><img width="30px" src="./src/img/calendar.png"> - 5 Nights 6 Days</p>
-                        <p class="text-white"><img width="40px" src="./src/img/placeholder.png">- Tbilisi,Mtskheta,Ananuri,Kazbegi,Gudauri,Sighnaghi,Kvareli,Gori</p>
+                        <p class="text-white"><img width="30px" src="../src/img/calendar.png"> - 5 ночей 6 дней</p>
+                        <p class="text-white"><img width="40px" src="../src/img/placeholder.png">- Тбилиси, Мцхета, Ананури, Казбеги, Гудаури, Сигнахи, Кварели, Гори</p>
                     </div>
-                     <button class="btn-primary">Read More...</button>
+                    <a href="../ru/tourtwo.html"><button class="btn-primary">Читать дальше...</button></a>
                 </div>
                 
                
@@ -199,16 +204,16 @@
         <section class="response-only">
             <div class="text-center mt-3">
                 <div>
-                    <img width="264px" height="264px" src="./src/img/tourtwo.jpg" alt="">
+                    <img width="264px" height="264px" src="../src/img/tourtwo.jpg" alt="">
                    
                 </div>
-                <h3 class="mt-3 text-white">Tour For Georgia 5 Nights 6 Days</h3>
+                <h3 class="mt-3 text-white">Тур по Грузии на 5 ночей и 6 дней</h3>
                 <div class="d-flex align-items-center justify-content-center flex-wrap mt-4">
-                    <p class="text-white"><img width="30px" src="./src/img/calendar.png">- 5 Nights 6 Days</p>
-                    <p class="text-white"><img width="40px" src="./src/img/placeholder.png">- Tbilisi,Mtskheta,Ananuri,Kazbegi,Gudauri,Sighnaghi,Kvareli,Gori</p>
+                    <p class="text-white"><img width="30px" src="../src/img/calendar.png">- 5 ночей 6 дней</p>
+                    <p class="text-white"><img width="40px" src="../src/img/placeholder.png">- Тбилиси, Мцхета, Ананури, Казбеги, Гудаури, Сигнахи, Кварели, Гори</p>
                 </div>
                 <div class="justify-content-center d-flex">
-                     <button class="btn-primary">Read More...</button>
+                    <a href="../ru/tourtwo.html"><button class="btn-primary">Читать дальше...</button></a>
                 </div>
             </div>
         </section>
@@ -219,15 +224,15 @@
          <section class="desktop-only container">
             <div class="mt-5 gap-5 d-flex posRelative">
                 <div>
-                    <img width="500px" height="400px" src="./src/img/102914786_3017801381623100_3569093401791954944_n.jpg" alt="">
+                    <img width="500px" height="400px" src="../src/img/102914786_3017801381623100_3569093401791954944_n.jpg" alt="">
                 </div>
                 <div>
-                    <h3 class="text-white">Tour For Georgia 7 Nights 8 Days</h3>
+                    <h3 class="text-white">Тур по Грузии на 7 ночей и 8 дней</h3>
                     <div class="d-flex align-items-center">
-                        <p class="text-white"><img width="30px" src="./src/img/calendar.png"> - 7 Nights 8 Days</p>
-                        <p class="text-white"><img width="40px" src="./src/img/placeholder.png">- Tbilisi,Mtskheta,Region of Kakheti and Gudauri</p>
+                        <p class="text-white"><img width="30px" src="../src/img/calendar.png"> - 7 ночей 8 дней</p>
+                        <p class="text-white"><img width="40px" src="../src/img/placeholder.png">- Тбилиси, Мцхета, регион Кахети и Гудаури</p>
                     </div>
-                     <button class="btn-primary">Read More...</button>
+                    <a href="../ru/tourthree.html"><button class="btn-primary">Читать дальше...</button></a>
                 </div>
                 
                
@@ -236,16 +241,16 @@
         <section class="response-only">
             <div class="text-center mt-3">
                 <div>
-                    <img width="264px" height="264px" src="./src/img/102914786_3017801381623100_3569093401791954944_n.jpg" alt="">
+                    <img width="264px" height="264px" src="../src/img/102914786_3017801381623100_3569093401791954944_n.jpg" alt="">
                    
                 </div>
-                <h3 class="mt-3 text-white">Tour For Georgia 7 Nights 8 Days</h3>
+                <h3 class="mt-3 text-white">Тур по Грузии на 7 ночей и 8 дней</h3>
                 <div class="d-flex align-items-center justify-content-center flex-wrap mt-4">
-                    <p class="text-white"><img width="30px" src="./src/img/calendar.png"> - 7 Nights 8 Days</p>
-                    <p class="text-white"><img width="40px" src="./src/img/placeholder.png">- Tbilisi,Mtskheta,Region of Kakheti and Gudauri</p>
+                    <p class="text-white"><img width="30px" src="../src/img/calendar.png"> - 7 ночей 8 дней</p>
+                    <p class="text-white"><img width="40px" src="../src/img/placeholder.png">- Тбилиси, Мцхета, регион Кахети и Гудаури</p>
                 </div>
                 <div class="justify-content-center d-flex">
-                     <button class="btn-primary">Read More...</button>
+                    <a href="../ru/tourthree.html"><button class="btn-primary">Читать дальше...</button></a>
                 </div>
             </div>
         </section>
@@ -256,15 +261,15 @@
          <section class="desktop-only container">
             <div class="mt-5 gap-5 d-flex posRelative">
                 <div>
-                    <img width="500px" height="400px" src="./src/img/tourfour.jpg" alt="">
+                    <img width="500px" height="400px" src="../src/img/tourfour.jpg" alt="">
                 </div>
                 <div>
-                    <h3 class="text-white">Tour For Georgia 7 Nights 8 Days</h3>
+                    <h3 class="text-white">Тур по Грузии на 7 ночей и 8 дней</h3>
                     <div class="d-flex align-items-center flex-wrap mt-3">
-                        <p class="text-white"><img width="30px" src="./src/img/calendar.png"> - 7 Nights 8 Days</p>
-                        <p class="text-white"><img width="40px" src="./src/img/placeholder.png">- Tbilisi,Mtskheta,Gori,Kazbegi,Gudauri,Kutaisi,Martvili,Borjomi Prometheus and Rabati</p>
+                        <p class="text-white"><img width="30px" src="../src/img/calendar.png"> - 7 ночей 8 дней</p>
+                        <p class="text-white"><img width="40px" src="../src/img/placeholder.png">- Тбилиси, Мцхета, Гори, Казбеги, Гудаури, Кутаиси, Мартвили, Боржоми, Прометей и Рабати</p>
                     </div>
-                     <button class="btn-primary">Read More...</button>
+                    <a href="../ru/tourfour.html"><button class="btn-primary">Читать дальше...</button></a>
                 </div>
                 
                
@@ -273,16 +278,16 @@
         <section class="response-only">
             <div class="text-center mt-3">
                 <div>
-                    <img width="264px" height="264px" src="./src/img/tourfour.jpg" alt="">
+                    <img width="264px" height="264px" src="../src/img/tourfour.jpg" alt="">
                    
                 </div>
-                <h3 class="mt-3 text-white">Tour For Georgia 7 Nights 8 Days</h3>
+                <h3 class="mt-3 text-white">Тур по Грузии на 7 ночей и 8 дней</h3>
                 <div class="d-flex align-items-center justify-content-center flex-wrap mt-4">
-                    <p class="text-white"><img width="30px" src="./src/img/calendar.png"> - 7 Nights 8 Days</p>
-                    <p class="text-white"><img width="40px" src="./src/img/placeholder.png">- Tbilisi,Mtskheta,Gori,Kazbegi,Gudauri,Kutaisi,Martvili,Borjomi Prometheus and Rabati</p>
+                    <p class="text-white"><img width="30px" src="../src/img/calendar.png"> - 7 ночей 8 дней</p>
+                    <p class="text-white"><img width="40px" src="../src/img/placeholder.png">- Тбилиси, Мцхета, Гори, Казбеги, Гудаури, Кутаиси, Мартвили, Боржоми, Прометей и Рабати</p>
                 </div>
                 <div class="justify-content-center d-flex">
-                   <button class="btn-primary">Read More...</button>
+                    <a href="../ru/tourfour.html"><button class="btn-primary">Читать дальше...</button></a>
                 </div>
             </div>
         </section>
@@ -290,41 +295,40 @@
           
                 
     
-    <footer class="desktop-only">
+   <footer class="desktop-only">
       <div class="container">
         <div class="downStyle">
         <nav class="footer_navs">
           <div class="d-flex justify-content-between align-text-center">
             <div class="footerPhoto">
-              <a href="./index.html">
-                <img width="120px" src="./src/img/footerlogo.jpg">
+              <a href="../ru/index.html">
+                <img width="120px" src="../src/img/footerlogo.jpg">
               </a>
             </div>
             <div>
               <ul class="list-unstyled d-flex gap-5">
-                <li class="mt-2">
-                  <a href="./aboutus.html">About Us</a>
+                <li>
+                  <a href="../ru/aboutus.html">О Нас</a>
                 </li>
-                <li class="mt-2">
-                  <a href="#">Tours</a>
+                <li>
+                  <a href="../ru/tours.html">Туры</a>
                 </li>
-                <li class="mt-2">
-                  <a href="#">Prices</a>
+                <li>
+                  <a href="../ru/aboutgeo.html">Грузия</a>
                 </li>
-               
                 
               
               </ul>
             </div>
             <div class="d-flex gap-3">
               <div>
-                <img width="20px" src="./src/img/tik-tok.png">
+                <img width="20px" src="../src/img/tik-tok.png">
               </div>
               <div>
-                <img width="20px" src="./src/img/instagram (1).png">
+                <img width="20px" src="../src/img/instagram (1).png">
               </div>
               <div>
-                <img width="20px" src="./src/img/social.png">
+                <img width="20px" src="../src/img/social.png">
               </div>
             </div>
           </div>
@@ -332,25 +336,26 @@
         <div class="d-flex mt-5 justify-content-between align-items-center">
           <div class="">
             <div class="g_border d-flex align-items-center justify-content-center">
-              <h2 class="align-text-center">Contact Us</h2>
+              <h2 class="align-text-center">Контакты</h2>
             </div>
             
-            <p class="mt-3">Email: info@georest.ge</p>
+            <p class="mt-3">Электронная почта: inforest44@gmail.com</p>
             <p>WhatsApp: +79246065230</p>
-            <p>Address: Tbilisi,Marjanishvili N2</p>
+            <p>телефон: +995797960707</p>
+            <p>Адрес: Тбилиси,Марджанишвили №2</p>
           </div>
           <div class="d-flex m gap-3">
-            <input class="footer_email" placeholder="Email">
-            <button class="btn-primary" type="sunmit">Subscribe to news</button>
+            <input class="footer_email" placeholder="Электронная почта">
+            <button class="btn-primary" type="sunmit">Подписаться</button>
           </div>
           
         </div>
         <hr class="mt-5 footer_line">
           <div class="d-flex justify-content-end gap-3">
             <p>
-              All Rights Reserved © 2019 GeoRest
+              Все права защищены © 2019 GeoRest
             </p>
-           >
+           
           </div>
       </div>
   </div>
@@ -359,57 +364,61 @@
   <footer class="response-only">
     <div class="container mb_down">
       <div class="footerPhoto">
-        <a href="./index.html">
-          <img width="120px" src="./src/img/footerlogo.jpg">
+        <a href="../ru/index.html">
+          <img width="120px" src="../src/img/footerlogo.jpg">
         </a>
       </div>
       <ul class="list-unstyled mt-5 text-center">
-        <li>
-          <a href="./aboutus.html">About Us</a>
-        </li>
-        <li class="mt-2">
-          <a>Tours</a>
-        </li>
-        <li class="mt-2">
-          <a>Prices</a>
-        </li>
+       
+         <li>
+                  <a href="../ru/aboutus.html">О Нас</a>
+                </li>
+                <li class="mt-2">
+                  <a href="../ru/tours.html">Туры</a>
+                </li>
+                <li class="mt-2">
+                  <a href="../ru/aboutgeo.html">Грузия</a>
+                </li>
        
       
       </ul>
       <div class="mt-5">
-        <div class="d-flex justify-content-center">
-          <h2 class="g_border text-center">Contact Us</h2>
+        <div class=" d-flex justify-content-center">
+          <h2 class="g_border text-center">Контакты</h2>
         </div>
-        <p class="mt-3 text-center">Email: info@georest.ge</p>
-        <p class="text-center">WhatsApp: +79246065230</p>
-        <p class="text-center">Address: Tbilisi,Marjanishvili N2</p>
+        <p class="mt-3 text-center">Электронная почта: inforest44@gmail.com</p>
+            <p class="text-center">WhatsApp: +79246065230</p>
+            <p class="text-center">телефон: +995797960707</p>
+            <p class="text-center">Адрес: Тбилиси,Марджанишвили №2</p>
       </div>
-       <!-- Subscribe form for mobile -->
-       <div class="mt-5 mobile_emailborder d-flex flex-wrap justify-content-center align-items-center gap-3">
-        <input class="mb_footer_email" placeholder="Email">
-        <button class="btn-primaryRes" type="sunmit">Subscribe to news</button>
+      <div class="mt-5 mobile_emailborder d-flex flex-wrap justify-content-center align-items-center gap-3">
+        <input class="mb_footer_email" placeholder="Электронная почта">
+        <button class="btn-primaryRes" type="sunmit">Подписаться</button>
       </div>
-  
-      <!-- Social media icons -->
-      <div class="d-flex mt-5 gap-3 justify-content-center">
-        <div><img width="20px" src="./src/img/tik-tok.png" alt="TikTok"></div>
-        <div><img width="20px" src="./src/img/instagram (1).png" alt="Instagram"></div>
-        <div><img width="20px" src="./src/img/social.png" alt="Social Media"></div>
+      <div class="d-flex mt-5 gap-3">
+        <div>
+          <img width="20px" src="../src/img/tik-tok.png">
+        </div>
+        <div>
+          <img width="20px" src="../src/img/instagram (1).png">
+        </div>
+        <div>
+          <img width="20px" src="../src/img/social.png">
+        </div>
       </div>
       <div>
         <hr class="mt-5 mbfooter_line">
       </div>
       <div>
         <p>
-          All Rights Reserved © 2019 GeoRest
+          Все права защищены © 2019 GeoRest
         </p>
        
       </div>
     </div>
 </div>
 </footer>
-<script src="./script.js"></script>
-<script src="./language.js"></script>
+<script src="../language.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

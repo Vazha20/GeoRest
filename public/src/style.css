@@ -173,6 +173,9 @@ hr {
     .response-only {
         display: block;
     }
+    .flexWrap{
+        flex-wrap: wrap;
+    }
    
 }
 
@@ -533,6 +536,7 @@ color: white;
 
 .dropdown-content a:hover {
     background-color: #ddd;
+    border-radius: 10px;
 }
 
 .dropdown-content img {
@@ -815,12 +819,16 @@ border-radius: 10px;
 }
 
 #loading-spinner {
-    display: none; /* Hide the spinner by default */
-    font-size: 16px;
-    color: #007bff; /* You can customize the color */
-    margin-top: 250px;
-    
+    display: none; /* Hide by default */
+    font-size: 30px;
+    color: #007bff;  
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center horizontally & vertically */
+    z-index: 9999;
 }
+
 
 .fontForRes{
     font-family: Georgia, 'Times New Roman', Times, serif;

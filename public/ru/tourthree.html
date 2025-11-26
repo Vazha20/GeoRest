@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="x-icon" href="../src/img/logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../src/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>GeoRest</title>
+</head>
+<body id="color_bg" class="glass-effect">
+
+  <div class="container text-center loading" id="loading-spinner" style="display: none;">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only"></span>
+    </div>
+  </div>
+
+  <div id="page-content">
+    <div class="desktop-only">
+        <div class="container mt-2 d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-social">
+            <a href="../ru/index.html" class="d-flex align-items-center"><img width="120px" src="../src/img/logo.png"></a>
+            <div class="d-flex gap-3">
+                <div>
+                    <a><img width="20px" src="../src/img/tik-tok.png"></a>  
+                </div>
+                <div>
+                    <a><img width="20px" src="../src/img/instagram (1).png"></a>      
+                </div>
+                <div>
+                    <a><img width="20px" src="../src/img/social.png"></a>     
+                </div>
+            </div>
+            
+            </div>
+            
+            <div class="d-flex align-items-center gap-3 text-decoration">
+              <div class="language-switcher">
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown()">
+                        <img src="../src/img/icons8-russian-federation-96.png" alt="English" title="Select Language"> Russian
+                        <span class="dropdown-arrow">&#9662;</span> <!-- Dropdown arrow icon -->
+                    </button>
+                    <div class="dropdown-content" id="languageDropdown">
+                        <a href="../tourthree.html" onclick="switchLanguage(event)">
+                            <img src="../src/img/united-kingdom.png" alt="English"> English
+                        </a>
+                        <a href="../ka/tourthree.html" onclick="switchLanguage(event)">
+                            <img src="../src/img/icons8-georgia-96.png" alt="ქართული"> ქართული
+                        </a>
+                        <a href="../zh/tourthree.html" onclick="switchLanguage(event)">
+                          <img src="../src/img/china.png" alt="Chinese"> Chinese
+                      </a>
+                    </div>
+                </div>
+            </div>
+            
+            
+              
+            </div>
+        </div>
+      </div>
+      
+
+      
+      <div class="response-only">
+        <div class="container">
+          
+          <nav class="navbar navbar-expand-lg fixed-top bg-white">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+                <!-- Burger Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <!-- Logo -->
+                <a class="navbar-brand" href="../ru/index.html">&nbsp;&nbsp;<img width="70px" height="70px" src="../src/img/logo.png" alt="logo"></a>
+        
+                <!-- Language Switcher -->
+                <div class="d-flex align-items-center gap-3">
+                    <div>
+                        <div>
+                          <button class="dropbtn" onclick="toggleDropdownRes()">
+                            <img src="../src/img/icons8-russian-federation-96.png" alt="English" title="Select Language">
+                          </button>
+                          <div class="dropdown-content" id="languageMenu">
+                            <a href="../tourthree.html" onclick="switchLanguageRes(event)">
+                                <img src="../src/img/united-kingdom.png" alt="English"> English 
+                            </a>
+                            <a href="../ka/tourthree.html" onclick="switchLanguageRes(event)">
+                                <img src="../src/img/icons8-georgia-96.png" alt="ქართული"> ქართული
+                            </a>
+                            <a href="../zh/tourthree.html" onclick="switchLanguageRes(event)">
+                                <img src="../src/img/china.png" alt="Chinese"> Chinese
+                            </a>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Navbar Items -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="../ru/aboutus.html">О нас</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../ru/tours.html">Туры</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../ru/aboutgeo.html">Грузия</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../ru/contacts.html">Контакты</a></li>                    </ul>
+                </div>
+            </div>
+        </nav>
+      </div>
+    </div> 
+
+
+    
+    
+         <div class="nav-color desktop-only">
+      <hr>
+      <div class="container">
+        
+                 <nav class="n">
+              <ul class="nav-link d-flex text-decoration white">
+                <li>
+                    <a  href="../ru/aboutus.html">О нас</a>
+                </li>
+                <li>
+                    <a  href="../ru/tours.html">Туры</a>
+                </li>
+                <li>
+                    <a  href="../ru/aboutgeo.html">Грузия</a>
+                </li>
+                <li>
+                    <a  href="../ru/contacts.html">Контакты</a>
+                </li>
+              </ul>
+            </nav>  
+      </div>
+      <hr>
+    </div>
+    
+       <section class="container">
+          <div class="marginTop response-only"></div>
+             <div class="horizontal-scroll   mt-5">
+                    <img width="500px" height="400px" src="../src/img/qq/IMG_1941.JPG" alt="">
+            <img width="500px" height="400px" src="../src/img/qq/IMG_1945.JPG" alt="">                    
+            <img width="500px" height="400px" src="../src/img/qq/IMG_1943.JPG" alt="">           
+             <img width="500px" height="400px" src="../src/img/qq/IMG_1954.JPG" alt="">                   
+            <img width="500px" height="400px" src="../src/img/qq/IMG_1949.jpeg" alt="">                    
+            <img width="500px" height="400px" src="../src/img/qq/IMG_1950.jpeg" alt="">               
+            <img width="500px" height="400px" src="../src/img/qq/IMG_1948.JPG" alt="">
+                </div>
+     
+
+                <div class="mt-4">
+                    <h3 class="text-white">Тур по Грузии на 7 ночей и 8 дней</h3>
+                    <div class="d-flex align-items-center flex-wrap mt-4">
+                        <p class="text-white pTours"><img width="30px" src="../src/img/calendar.png">&nbsp;-&nbsp;7 ночей и 8 дней</p>
+                        &nbsp;&nbsp;&nbsp;
+                        <p class="text-white pTours"><img width="30px" src="../src/img/placeholder.png">-&nbsp;Тбилиси, Мцхета, регион Кахети и Гудаури</p>
+                    </div>
+               </div>
+                    
+ <div class="bbb">
+  <div class="mt-4 d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-1 col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12">
+      <h3 class="pTours mt-2">День 1 — Тбилиси</h3>
+    </div>
+    <div class="toggleBtn">
+      <img class="icon plus active" src="../src/img/plus.png" alt="Plus">
+      <img class="icon minus" src="../src/img/minus.png" alt="Minus">
+    </div>
+  </div>
+  <div class="toggle-content" style="display: none;">
+<li class="BoldLi">Тур по Тбилиси</li>
+<p class="mt-2">Откройте для себя Тбилиси с этим туром, который проведёт вас по самым значимым достопримечательностям города. Вы узнаете об истории и культуре столицы Грузии, пока гид покажет вам такие места, как церковь Метехи, монументальная скульптура Матери Картли и крепость Нарикала.</p>
+
+<li class="BoldLi">Тур включает:</li>
+<p class="mt-2">
+Собор Святой Троицы — один из крупнейших храмов в мире и центральный кафедральный собор Грузинской православной церкви.
+
+Далее трансфер в современный район Тбилиси, по пути мимо проспекта Руставели и здания парламента Грузии, пока вы не достигнете площади Свободы, впечатляющей статуей Святого Георгия и архитектурой XVIII–XIX веков.
+
+Тур продолжится в церкви Метехи (около XIII века), средневековом здании на берегу реки Куры (Мтквари), охраняемом памятником царю Вахтангу Горгасалу, который, согласно легенде, владел мечом весом 16 килограммов при жизни.
+
+Пройдите по Мосту Мира через реку Кура, который соединяет парк Ри́ки. Мост построен в 2010 году, длина — 155 метров, дизайн разработан известным архитектором Микеле де Луки.
+
+Из популярного парка Ри́ки канатная дорога ведёт к крепости Нарикала (IV век), старейшей цитадели Грузии и лучшему месту для панорамных видов на город и ботанические сады. Рядом находится 20-метровая статуя Матери Картли (Mother of Georgia).
+
+Прогулка по Старому городу, крупнейшему району города. По пути обратите внимание на Джума-мечеть — одну из немногих мечетей в мире, где проводятся службы для обоих исламских направлений — шиитов и суннитов.
+
+Откройте для себя оригинальный и впечатляющий «Мост влюблённых» под тенью 22-метрового водопада Легвтахеви.
+
+Пройдите исторический район Абанотубани, по пути увидите знаменитые серные бани Тбилиси, которые, согласно легенде, тесно связаны с основанием города.
+
+Выход из Старого города и прогулка по улице Жан Шарден (Jean Chardin), полной уютных кафе, баров с дегустацией вин и сувенирных магазинов.
+
+Вход в кафедральный собор Сиони (около VII века), чтобы полюбоваться его внутренними золотыми и бирюзовыми фресками.
+
+Фотосъёмка у Кардуно-комического наклонного часового башни Тбилиси, которая отмечает место известного театра марионеток Резо Габриадзе.
+
+Восхищение перед базиликой Анчисхати (VI век), грузинского православного кафедрального собора и старейшего храма Тбилиси.
+
+Далее трансфер в отель или при желании вы можете самостоятельно продолжить исследование Старого города. Конец тура по Тбилиси.
+</p>
+
+</div>
+</div>
+
+                      
+ <div class="bbb">
+  <div class="mt-4 d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-1 col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12">
+      <h3 class="pTours mt-2">День 2 — Мцхета</h3>
+    </div>
+    <div class="toggleBtn">
+      <img class="icon plus active" src="../src/img/plus.png" alt="Plus">
+      <img class="icon minus" src="../src/img/minus.png" alt="Minus">
+    </div>
+  </div>
+  <div class="toggle-content" style="display: none;">
+    <p>
+Посетите Мцхету — один из древнейших городов Грузии, расположенный недалеко от Тбилиси. Мцхета была столицей раннего царства Иберия с III века до н.э. по V век н.э. Именно здесь грузины приняли христианство в 317 году, и до сих пор Мцхета остаётся центром Грузинской православной и апостольской церкви.
+
+Попробуйте увидеть монастырь Джвари — грузинский православный монастырь VI века, расположенный недалеко от Мцхеты, который является объектом Всемирного наследия ЮНЕСКО. Название переводится как «Монастырь Креста». Большая церковь представляет собой вершину архитектурной типологии и является настоящим архитектурным шедевром, с видом на слияние рек Арагви и Куры.
+
+Затем посетите кафедральный собор Светицховели. Он был построен в XI веке, хотя само место гораздо старше и связано с IV веком. Собор выделяется своим художественным значением, величием, гармонией и особой ролью в истории Грузии. Монумент имеет удлиненный крест, который словно устремляется в небо. Собор был главным местом паломничества на Шёлковом пути, местом поклонения Христу и усыпальницей грузинских царей. Светицховели — второй по величине кафедральный собор Грузии и включён в список Всемирного наследия ЮНЕСКО вместе с другими историческими постройками Мцхеты.
+</p>
+
+  </div>
+</div>
+  <div class="bbb">
+  <div class="mt-4 d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-1 col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12">
+      <h3 class="pTours mt-2">День 3 — регион Кахети</h3>
+    </div>
+    <div class="toggleBtn">
+      <img class="icon plus active" src="../src/img/plus.png" alt="Plus">
+      <img class="icon minus" src="../src/img/minus.png" alt="Minus">
+    </div>
+  </div>
+  <div class="toggle-content" style="display: none;">
+   <li class="BoldLi">Общее</li>
+<p>Откройте для себя исторические места и природную красоту в Бодбе, Сигнахи и Кварели в рамках однодневного тура из Тбилиси. Некоторые из самых красивых мест Восточной Грузии расположены в дикой местности, поэтому добраться в эти три города без собственного транспорта довольно сложно — однако с гидом, который обеспечит логистику, вы сможете полностью сосредоточиться на исследовании городов, внесённых в список ЮНЕСКО, прогулке по историческому монастырю и погружении в атмосферу «города любви» Грузии.</p>
+
+<li class="BoldLi">Монастырь Святой Нино в Бодбе</li>
+<p>Мы отправимся в женский монастырь Бодбе. По пути остановимся на смотровой площадке Сигнахи и сделаем удивительные фотографии. Монастырь Святой Нино в Бодбе находится в Кахетии, в 2 км от Сигнахи. Согласно легенде, он построен на месте захоронения святой Нино — святой, принесшей христианство грузинам. Грузинские цари уделяли особое внимание монастырю Бодбе. Он восстанавливался и реставрировался на протяжении многих лет.</p>
+
+<li class="BoldLi">Сигнахи</li>
+<p>Сигнахи — город в Кахетии, в 75 км к востоку от Тбилиси. Тем не менее, маленькие города Грузии стали популярными туристическими направлениями, так как они находятся в винном регионе страны. Город выделяется пастельными домами, деревянными карнизами и узкими мощёными улочками. Большая грузинская стена окружает Сигнахи и открывает потрясающие виды для фотографий.</p>
+
+<li class="BoldLi">Кварели</li>
+<p>По пути мы посетим село Кварели, где можно попробовать традиционный грузинский хлеб, сыр и чачу.</p>
+
+ 
+</div>
+</div>
+ 
+ <div class="bbb">
+  <div class="mt-4 d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-1 col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12">
+      <h3 class="pTours mt-2">День 4 — свободный день</h3>
+    </div>
+    <div class="toggleBtn">
+      <img class="icon plus active" src="../src/img/plus.png" alt="Plus">
+      <img class="icon minus" src="../src/img/minus.png" alt="Minus">
+    </div>
+  </div>
+  <div class="toggle-content" style="display: none;">
+    <ul>
+<li class="BoldLi">08:00 - 10:00 Завтрак в отеле</li>
+
+    </ul>
+  </div>
+</div>
+  
+<div class="bbb">
+  <div class="mt-4 d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-1 col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12">
+      <h3 class="pTours mt-2">День 5 — шоппинг-тур</h3>
+    </div>
+    <div class="toggleBtn">
+      <img class="icon plus active" src="../src/img/plus.png" alt="Plus">
+      <img class="icon minus" src="../src/img/minus.png" alt="Minus">
+    </div>
+  </div>
+  <div class="toggle-content" style="display: none;">
+    <ul class="BoldLi">
+      <li>08:00 - 10:00 Завтрак в отеле</li>
+<li>Шоппинг-тур (грузинские дизайнеры)</li>
+<li>Трансфер в отель</li>
+
+
+    </ul>
+  </div>
+</div>
+
+<div class="bbb">
+  <div class="mt-4 d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-1 col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12">
+      <h3 class="pTours mt-2">День 6 — Гудаури</h3>
+    
+    </div>
+    <div class="toggleBtn">
+      <img class="icon plus active" src="../src/img/plus.png" alt="Plus">
+      <img class="icon minus" src="../src/img/minus.png" alt="Minus">
+    </div>
+  </div>
+  <div class="toggle-content" style="display: none;">
+<p>
+Гудаури, расположенный в высоких горах Большого Кавказа, является самым популярным зимним и альпийским курортом Грузии. Он находится примерно в 120 км к северу от Тбилиси вдоль знаменитой Грузинской военной дороги. Курорт, расположенный на высоте 2 200 метров над уровнем моря, предлагает захватывающие панорамные виды, чистый горный воздух и инфраструктуру мирового уровня для зимних видов спорта.
+
+Гудаури особенно популярен благодаря широким склонам, возможностям фрирайда и хелискиингу, что делает его идеальным как для новичков, так и для любителей экстремальных видов спорта. Сезон работы подъемников обычно длится с декабря до конца марта или апреля, когда естественного снега и солнечных дней достаточно.
+
+Помимо катания на лыжах, Гудаури предлагает параглайдинг, катание на снегоходах, тюбинг и походы в горах, что делает курорт активным круглый год. Размещение варьируется от роскошных отелей до уютных гостевых домов, а курорт известен своим тёплым гостеприимством и спокойной атмосферой.
+
+По пути в Гудаури туристы могут посетить исторические и природные достопримечательности, такие как крепость Ананури, Жинвальское водохранилище и памятник дружбы России и Грузии, которые открывают великолепные виды по пути.
+
+Если вы ищете адреналин на склонах или просто спокойствие в горах Кавказа, Гудаури предлагает незабываемый и яркий грузинский опыт.
+</p>
+
+  </div>
+</div>
+<div class="bbb">
+  <div class="mt-4 d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-1 col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12">
+      <h3 class="pTours mt-2">День 7 — свободный день</h3>
+    
+    </div>
+    <div class="toggleBtn">
+      <img class="icon plus active" src="../src/img/plus.png" alt="Plus">
+      <img class="icon minus" src="../src/img/minus.png" alt="Minus">
+    </div>
+  </div>
+  <div class="toggle-content" style="display: none;">
+    <ul class="BoldLi">
+     <li>08:00 - 10:00 Завтрак в отеле</li>
+
+    </ul>
+  </div>
+</div>
+<div class="bbb">
+  <div class="mt-4 d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-1 col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12">
+      <h3 class="pTours mt-2">День 8 — отъезд из Тбилиси</h3>
+    
+    </div>
+    <div class="toggleBtn">
+      <img class="icon plus active" src="../src/img/plus.png" alt="Plus">
+      <img class="icon minus" src="../src/img/minus.png" alt="Minus">
+    </div>
+  </div>
+  <div class="toggle-content" style="display: none;">
+    <ul class="BoldLi">
+   <li>08:00 - 10:00 Завтрак в отеле</li>
+<li>Выезд из номера (чек-аут)</li>
+<li>Трансфер в аэропорт</li>
+
+
+    </ul>
+  </div>
+</div>
+<h3 class="mt-4 text-white">Цены</h3>
+
+
+      <div class="d-flex justify-content-center gap-5 flex-wrap mt-4">
+  <div class="imgWidth">
+    <img class="zoomable" style="cursor: pointer;" src="./Untitled123.png" width="100%">
+  </div>
+  <div class="imgWidth">
+    <img class="zoomable" style="cursor: pointer;" src="./Untitled12345.png" width="100%">
+  </div>
+</div>
+
+<div id="modal" class="modal">
+  <span class="close">×</span>
+  <img class="modal-content" id="modal-img">
+</div>
+
+       
+       
+        </section>
+      
+   <footer class="desktop-only">
+      <div class="container">
+        <div class="downStyle">
+        <nav class="footer_navs">
+          <div class="d-flex justify-content-between align-text-center">
+            <div class="footerPhoto">
+              <a href="../ru/index.html">
+                <img width="120px" src="../src/img/footerlogo.jpg">
+              </a>
+            </div>
+            <div>
+              <ul class="list-unstyled d-flex gap-5">
+                <li>
+                  <a href="../ru/aboutus.html">О Нас</a>
+                </li>
+                <li>
+                  <a href="../ru/tours.html">Туры</a>
+                </li>
+                <li>
+                  <a href="../ru/aboutgeo.html">Грузия</a>
+                </li>
+                
+              
+              </ul>
+            </div>
+            <div class="d-flex gap-3">
+              <div>
+                <img width="20px" src="../src/img/tik-tok.png">
+              </div>
+              <div>
+                <img width="20px" src="../src/img/instagram (1).png">
+              </div>
+              <div>
+                <img width="20px" src="../src/img/social.png">
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="d-flex mt-5 justify-content-between align-items-center">
+          <div class="">
+            <div class="g_border d-flex align-items-center justify-content-center">
+              <h2 class="align-text-center">Контакты</h2>
+            </div>
+            
+            <p class="mt-3">Электронная почта: inforest44@gmail.com</p>
+            <p>WhatsApp: +79246065230</p>
+            <p>телефон: +995797960707</p>
+            <p>Адрес: Тбилиси,Марджанишвили №2</p>
+          </div>
+          <div class="d-flex m gap-3">
+            <input class="footer_email" placeholder="Электронная почта">
+            <button class="btn-primary" type="sunmit">Подписаться</button>
+          </div>
+          
+        </div>
+        <hr class="mt-5 footer_line">
+          <div class="d-flex justify-content-end gap-3">
+            <p>
+              Все права защищены © 2019 GeoRest
+            </p>
+           
+          </div>
+      </div>
+  </div>
+</div>
+  </footer>
+  <footer class="response-only">
+    <div class="container mb_down">
+      <div class="footerPhoto">
+        <a href="../ru/index.html">
+          <img width="120px" src="../src/img/footerlogo.jpg">
+        </a>
+      </div>
+      <ul class="list-unstyled mt-5 text-center">
+       
+         <li>
+                  <a href="../ru/aboutus.html">О Нас</a>
+                </li>
+                <li class="mt-2">
+                  <a href="../ru/tours.html">Туры</a>
+                </li>
+                <li class="mt-2">
+                  <a href="../ru/aboutgeo.html">Грузия</a>
+                </li>
+       
+      
+      </ul>
+      <div class="mt-5">
+        <div class=" d-flex justify-content-center">
+          <h2 class="g_border text-center">Контакты</h2>
+        </div>
+        <p class="mt-3 text-center">Электронная почта: inforest44@gmail.com</p>
+            <p class="text-center">WhatsApp: +79246065230</p>
+            <p class="text-center">телефон: +995797960707</p>
+            <p class="text-center">Адрес: Тбилиси,Марджанишвили №2</p>
+      </div>
+      <div class="mt-5 mobile_emailborder d-flex flex-wrap justify-content-center align-items-center gap-3">
+        <input class="mb_footer_email" placeholder="Электронная почта">
+        <button class="btn-primaryRes" type="sunmit">Подписаться</button>
+      </div>
+      <div class="d-flex mt-5 gap-3">
+        <div>
+          <img width="20px" src="../src/img/tik-tok.png">
+        </div>
+        <div>
+          <img width="20px" src="../src/img/instagram (1).png">
+        </div>
+        <div>
+          <img width="20px" src="../src/img/social.png">
+        </div>
+      </div>
+      <div>
+        <hr class="mt-5 mbfooter_line">
+      </div>
+      <div>
+        <p>
+          Все права защищены © 2019 GeoRest
+        </p>
+       
+      </div>
+    </div>
+</div>
+</footer>
+<script src="../language.js"></script>
+<script src="../tours.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>

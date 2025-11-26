@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="x-icon" href="../src/img/logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../src/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>GeoRest</title>
+</head>
+<body id="color_bg" class="glass-effect">
+
+  <div class="container text-center loading" id="loading-spinner" style="display: none;">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only"></span>
+    </div>
+  </div>
+
+  <div id="page-content">
+    <div class="desktop-only">
+        <div class="container mt-2 d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-social">
+            <a href="../ka/index.html" class="d-flex align-items-center"><img width="120px" src="../src/img/logo.png"></a>
+            <div class="d-flex gap-3">
+                <div>
+                    <a><img width="20px" src="../src/img/tik-tok.png"></a>  
+                </div>
+                <div>
+                    <a><img width="20px" src="../src/img/instagram (1).png"></a>      
+                </div>
+                <div>
+                    <a><img width="20px" src="../src/img/social.png"></a>     
+                </div>
+            </div>
+            
+            </div>
+            
+            <div class="d-flex align-items-center gap-3 text-decoration">
+              <div class="language-switcher">
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown()">
+                        <img src="../src/img/icons8-georgia-96.png" alt="English" title="Select Language"> ქართული
+                        <span class="dropdown-arrow">&#9662;</span> <!-- Dropdown arrow icon -->
+                    </button>
+                    <div class="dropdown-content" id="languageDropdown">
+                        <a href="../tourtwo.html" onclick="switchLanguage(event)">
+                            <img src="../src/img/united-kingdom.png" alt="Georgian"> English
+                        </a>
+                        <a href="../ru/tourtwo.html" onclick="switchLanguage(event)">
+                            <img src="../src/img/icons8-russian-federation-96.png" alt="Russian"> Russian
+                        </a>
+                        <a href="../zh/tourtwo.html" onclick="switchLanguage(event)">
+                          <img src="../src/img/china.png" alt="Chinese"> Chinese
+                      </a>
+                    </div>
+                </div>
+            </div>
+            
+            
+              
+            </div>
+        </div>
+      </div>
+      
+
+      
+      <div class="response-only">
+        <div class="container">
+          
+          <nav class="navbar navbar-expand-lg fixed-top bg-white">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+                <!-- Burger Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <!-- Logo -->
+                <a class="navbar-brand" href="../ka/index.html">&nbsp;&nbsp;<img width="70px" height="70px" src="../src/img/logo.png" alt="logo"></a>
+        
+                <!-- Language Switcher -->
+                <div class="d-flex align-items-center gap-3">
+                    <div>
+                        <div>
+                          <button class="dropbtn" onclick="toggleDropdownRes()">
+                            <img src="../src/img/icons8-georgia-96.png" alt="English" title="Select Language">
+                          </button>
+                          <div class="dropdown-content" id="languageMenu">
+                            <a href="../tourtwo.html" onclick="switchLanguageRes(event)">
+                                <img src="../src/img/united-kingdom.png" alt="Georgian"> English<!-- Updated to Georgian -->
+                            </a>
+                            <a href="../ru/tourtwo.html" onclick="switchLanguageRes(event)">
+                                <img src="../src/img/icons8-russian-federation-96.png" alt="Russian"> Russian
+                            </a>
+                            <a href="../zh/tourtwo.html" onclick="switchLanguageRes(event)">
+                                <img src="../src/img/china.png" alt="Chinese"> Chinese
+                            </a>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Navbar Items -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="../ka/aboutus.html">ჩვენ შესახებ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../ka/tours.html">ტურები</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../ka/aboutgeo.html">საქართველო</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../ka/contacts.html">კონტაქტი</a></li>                    </ul>
+                </div>
+            </div>
+        </nav>
+      </div>
+    </div> 
+
+
+    
+    
+         <div class="nav-color desktop-only">
+      <hr>
+      <div class="container">
+        
+                 <nav class="n">
+              <ul class="nav-link d-flex text-decoration white">
+                <li>
+                    <a  href="../ka/aboutus.html">ჩვენ შესახებ</a>
+                </li>
+                <li>
+                    <a  href="../ka/tours.html">ტურები</a>
+                </li>
+                <li>
+                    <a  href="../ka/aboutgeo.html">საქართველო</a>
+                </li>
+                <li>
+                    <a  href="../ka/contacts.html">კონტაქტი</a>
+                </li>
+              </ul>
+            </nav>  
+      </div>
+      <hr>
+    </div>
+   <section class="container">
+          <div class="marginTop response-only"></div>
+             <div class="horizontal-scroll   mt-5">
+                               <img width="500px" height="400px" src="../src/img/200211131604-georgia-skiing-gudauri-skier-on-slopes.jpg" alt="">
+                    <img width="500px" height="400px" src="../src/img/2f697240931df0025491dead865fd6e5.jpg" alt="">
+                    <img width="500px" height="400px" src="../src/img/ea.jpg" alt="">
+                    <img width="500px" height="400px" src="../src/img/shardeni.jpg" alt="">
+                    <img width="500px" height="400px" src="../src/img/mtkvari.jpeg" alt="">
+                    <img width="500px" height="400px" src="../src/img/wine6.jpg" alt="">
+                    <img width="500px" height="400px" src="../src/img/Otium Image 2.jpg" alt="">
+                </div>
+     <!--   <div id="imageModal" class="modal">
+  <span class="close" id="closeModal">&times;</span>
+  <div class="modal-content" id="modalImageContainer">
+    <img id="modalImage" src="" alt="გაფართოებული სურათი">
+  </div>
+</div> -->  
+
+                <div class="mt-4">
+                    <h3 class="text-white">ტური საქართველოში: 5 ღამე / 6 დღე</h3>
+                    <div class="d-flex align-items-center flex-wrap mt-4">
+                        <p class="text-white pTours"><img width="30px" src="../src/img/calendar.png">&nbsp;-&nbsp;5 ღამე 6 დღე</p>
+                        &nbsp;&nbsp;&nbsp;
+                        <p class="text-white pTours"><img width="30px" src="../src/img/placeholder.png">-&nbsp;თბილისი, მცხეთა, ანანური, ყაზბეგი, გუდაური, სიღნაღი, ყვარლი, გორი</p>
+                    </div>
+               </div>
+                    
+ <div class="bbb">
+  <div class="mt-4 d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-1 col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12">
+      <h3 class="pTours mt-2">დღე 1 - თბილისი</h3>
+    </div>
+    <div class="toggleBtn">
+      <img class="icon plus active" src="../src/img/plus.png" alt="Plus">
+      <img class="icon minus" src="../src/img/minus.png" alt="Minus">
+    </div>
+  </div>
+  <div class="toggle-content" style="display: none;">
+    <ul>
+   <li>ჩამოსვლა თბილისში</li> <li>შეხვედრა ჩინურად მოლაპარაკე გიდთან, ვახშამი რესტორანში</li> <li>ტრანსფერი სასტუმროში, ღამე — თბილისის სასტუმროში</li> 
+    </ul>
+  </div>
+</div>
+
+                      
+ <div class="bbb">
+  <div class="mt-4 d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-1 col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12">
+      <h3 class="pTours mt-2">დღე 2 - მცხეთა ანანური ყაზბეგი</h3>
+    </div>
+    <div class="toggleBtn">
+      <img class="icon plus active" src="../src/img/plus.png" alt="Plus">
+      <img class="icon minus" src="../src/img/minus.png" alt="Minus">
+    </div>
+  </div>
+  <div class="toggle-content" style="display: none;">
+    <ul>
+      <li>საუზმე სასტუმროში</li> <li>შეხვედრა ჩინურად მოლაპარაკე გიდთან</li> <li>ჯვარის მონასტრის მონახულება</li> <li>სვეტიცხოვლის საკათედრო ტაძრის მონახულება</li> <li>სადილი რესტორანში</li> <li>ტრანსფერი ანანურისკენ</li> <li>ფოტო-გაჩერება ჟინვალის წყალსაცავთან</li> <li>ფოტო-გაჩერება საქართველო–რუსეთის მეგობრობის მონუმენტთან</li> <li>ტრანსფერი ყაზბეგში</li> <li>ვახშამი რესტორანში</li> <li>ღამისთევა ყაზბეგში ან გუდაურში მდებარე სასტუმროში</li>
+        </ul>
+  </div>
+</div>
+  <div class="bbb">
+  <div class="mt-4 d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-1 col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12">
+      <h3 class="pTours mt-2">დღე 3 - ყაზბგი გუდაური თბილისი</h3>
+    </div>
+    <div class="toggleBtn">
+      <img class="icon plus active" src="../src/img/plus.png" alt="Plus">
+      <img class="icon minus" src="../src/img/minus.png" alt="Minus">
+    </div>
+  </div>
+  <div class="toggle-content" style="display: none;">
+    <ul>
+      <li>საუზმე სასტუმროში</li> <li>შეხვედრა ჩინურად მოლაპარაკე გიდთან</li> <li>ოფროუდ თავგადასავალი 4x4 ჯიპით გერგეტის სამების მთისკენ</li> <li>გერგეტის სამების მონასტრის მონახულება (ამინდის პირობებიდან გამომდინარე)</li> <li>Rooms Hotel-ის მონახულება (სასმელები და საჭმელები არ არის ჩართული — სურვილის შემთხვევაში სტუმარი ადგილზე იხდის)</li> <li>სადილი რესტორანში</li> <li>ტრანსფერი გუდაურისკენ (32.4 კმ / 1 სთ)</li> <li>გუდაურის საბაგიროზე ორმხრივი გასეირნება (თუ საბაგირო არ იმუშავებს — მოხდება თანხის დაბრუნება ან შემოთავაზებული იქნება ალტერნატიული პროგრამა)</li> <li>ტრანსფერი თბილისში (121 კმ / 2.40 სთ)</li> <li>ფოტო-გაჩერება „საქართველოს ქრონიკებთან“</li> <li>ვახშამი რესტორანში</li> <li>ტრანსფერი სასტუმროში — ღამე თბილისში მდებარე სასტუმროში</li>
+    </ul>
+  </div>
+</div>
+ <div class="bbb">
+  <div class="mt-4 d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-1 col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12">
+      <h3 class="pTours mt-2">დღე 4 - სიღნაღი ყვარელი თბილისი</h3>
+    </div>
+    <div class="toggleBtn">
+      <img class="icon plus active" src="../src/img/plus.png" alt="Plus">
+      <img class="icon minus" src="../src/img/minus.png" alt="Minus">
+    </div>
+  </div>
+  <div class="toggle-content" style="display: none;">
+    <ul>
+   <li>საუზმე სასტუმროში</li> <li>შეხვედრა ჩინურად მოლაპარაკე გიდთან</li> <li>ტრანსფერი სიღნაღში</li> <li>ბოდბის წმინდა ნინოს მონასტრის მონახულება</li> <li>სიღნაღის ქალაქის კედლის მონახულება</li> <li>სადილი რესტორანში</li> <li>ტრანსფერი ყვარელში (61.6 კმ / 1.20 სთ)</li> <li>ყვარლის ღვინის გვირაბის მონახულება, მათ შორის ღვინის დაგემოვნება; შემდეგ დაბრუნება თბილისში (134 კმ / 2.40 სთ)</li> <li>ვახშამი რესტორანში</li> <li>ტრანსფერი სასტუმროში</li> <li>ღამისთევა თბილისის სასტუმროში</li>
+    </ul>
+  </div>
+</div>
+ <div class="bbb">
+  <div class="mt-4 d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-1 col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12">
+      <h3 class="pTours mt-2">დღე 5 - გორი უფლისციხე თბილისი</h3>
+    </div>
+    <div class="toggleBtn">
+      <img class="icon plus active" src="../src/img/plus.png" alt="Plus">
+      <img class="icon minus" src="../src/img/minus.png" alt="Minus">
+    </div>
+  </div>
+  <div class="toggle-content" style="display: none;">
+    <ul>
+       <li>საუზმე სასტუმროში</li> <li>შეხვედრა ჩინურად მოლაპარაკე გიდთან</li> <li>ტრანსფერი გორში (90 კმ / 1.30 სთ), სტალინის მუზეუმის მონახულება</li> <li>სადილი რესტორანში, უფლისციხის მღვიმე-ქალაქის მონახულება</li> <li>დაბრუნება თბილისში</li> <li>წმინდა სამების საკათედრო ტაძრის მონახულება</li> <li>მეტეხის ეკლესიის მონახულება</li> <li>სეირნობა შარდენის ქუჩაზე</li> <li>ვახშამი რესტორანში, ტრანსფერი სასტუმროში</li> <li>ღამისთევა თბილისის სასტუმროში</li>
+    </ul>
+  </div>
+</div>
+  
+
+<div class="bbb">
+  <div class="mt-4 d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-1 col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12">
+      <h3 class="pTours mt-2">დღე 6 - გამგზავრება თბილისიდან</h3>
+    
+    </div>
+    <div class="toggleBtn">
+      <img class="icon plus active" src="../src/img/plus.png" alt="Plus">
+      <img class="icon minus" src="../src/img/minus.png" alt="Minus">
+    </div>
+  </div>
+  <div class="toggle-content" style="display: none;">
+    <ul>
+        <li>საუზმე სასტუმროში</li> <li>შეხვედრა ჩინურად მოლაპარაკე გიდთან</li> <li>გაჩერება მშვიდობის ხიდთან</li> <li>ნარიყალას ციხესიმაგრეში ასვლ (ორმხრივი მგზავრობა)</li> <li>ფოტო-გაჩერება ქართლის დედასთან</li> <li>ფოტო-გაჩერება გოგირდის აბანანებთან</li> <li>სადილი რესტორანში, შოპინგი „ისტ პოინტში“</li> <li>ტრანსფერი აეროპორტში გამგზავრებისთვის</li>
+    </ul>
+  </div>
+</div>
+<h3 class="mt-4 text-white">ფასები, მომსახურების ჩათვლა და მნიშვნელოვანი შენიშვნები</h3>
+<div class="d-flex flexWrap gap-3 ">
+  
+
+
+
+  <div class="bbb">
+  <h3 class="mt-4">ფასები</h3>    
+  <hr>
+  <div class="d-flex gap-3 toggleSwitch">
+    
+   <div class="four active">
+  <h3>ერთადგილიანი</h3>
+</div>
+
+<div class="five">
+  <h3>ორადგილიანი</h3>
+</div>
+
+    </div>
+
+    <div class="toggle-p" style="display: block;">
+      <ul class="pTours">
+      <li>15 + 1 მგზავრი – 600$</li> <li>20 + 1 მგზავრი – 560$</li> <li>25 + 1 მგზავრი – 530$</li> <li>30 + 1 მგზავრი – 515$</li> <li>35 + 1 მგზავრი – 505$</li>
+      </ul>
+    </div>
+    <div class="toggle-p-five" style="display: none;">
+      <ul class="pTours">
+
+
+<li>15 + 1 მგზავრი – 495$</li>
+<li>20 + 1 მგზავრი – 450$</li>
+<li>25 + 1 მგზავრი – 425$</li>
+<li>30 + 1 მგზავრი – 410$</li>
+<li>35 + 1 მგზავრი – 405$</li>
+
+      </ul>
+    </div>
+
+
+</div>
+    <div class="bbb">
+  <h3 class="mt-4">მომსახურეობები</h3>    
+  <hr>
+  
+
+    <div>
+      <ul class="pTours">
+    <li>მგზავრობა კომფორტული ავტობუსით</li> <li>განთავსება სასტუმროებში: 4 ღამე თბილისში; 1 ღამე ყაზბეგში (სასტუმროები: *Iveria Inn* ან მსგავსი; *Intourist Kazbegi* / *Gudauri Inn*)</li> <li>ჩინურად მოლაპარაკე გიდი ექსკურსიის სრული პერიოდის განმავლობაში</li> <li>ყველა მითითებული ობიექტის შესასვლელი ბილეთი</li> <li>ყველა მითითებული სადილი და ვახშამი</li> <li>ღვინის დეგუსტაცია ყვარელში (2 სახეობა)</li> <li>ყოველ მოზრდილზე დღეში 1 ბოთლი 0.5 ლიტრი წყალი</li> <li>1 უფასო განთავსება ერთადგილიან ნომერში</li>
+      </ul>
+    </div>
+    
+
+
+</div>
+  <div class="bbb">
+    <h3 class="mt-4">შენიშვნები</h3>
+    <hr>
+    <p class="pTours">
+        
+     საქართველოს ტრადიციული მეღვინეობის გულში, იხილეთ ქვეყნის საოცარი ბუნებრივი ხედები — ჯადოსნური ველებიდან მოზიდული მთების სილამაზემდე, განიცადეთ წარსულის გაცოცხლება და მოისმინეთ ისტორია, რომელიც ციხეებით, მონასტრებითა და კლდეებში გამოკვეთილი ქალაქებით გიამბობთ. საქართველოს ტური ჰგავს თემატურ პარკში ვიზიტს, სადაც ყოველდღე ახალი შთაბეჭდილებები და ემოციები გელოდებათ. ჩვენი მცირე ჯგუფის ტური საქართველოში დაამტკიცებს, რომ კავკასიის ამ ქვეყანას უკავშირდება ლეგენდები და მითი — ყველა მართალია.
+    
+    </p>
+  </div>
+</div>
+           <p class=" text-white mt-4 pTours">!!! თუ იქნება დამატებით მოთხოვნა ლანჩებისა და ვახშმებისთვის, თითო კვებაზე დამატებითი გადასახადი შეადგენს 25$-ს</p>
+        </section>
+      
+
+  <footer class="desktop-only">
+    <div class="container">
+      <div class="downStyle">
+      <nav class="footer_navs">
+        <div class="d-flex justify-content-between align-text-center">
+          <div class="footerPhoto">
+            <a href="../ka/index.html">
+              <img width="120px" src="../src/img/footerlogo.jpg">
+            </a>
+          </div>
+          <div>
+            <ul class="list-unstyled d-flex gap-5">
+              <li class="mt-2">
+                <a href="../ka/aboutus.html">ჩვენ შესახებ</a>
+              </li>
+              <li class="mt-2">
+                <a href="../ka/tours.html">ტურები</a>
+              </li>
+              <li class="mt-2">
+                <a href="../ka/aboutgeo.html">საქართველო</a>
+              </li>
+             
+              
+            
+            </ul>
+          </div>
+          <div class="d-flex gap-3">
+            <div>
+              <img width="20px" src="../src/img/tik-tok.png">
+            </div>
+            <div>
+              <img width="20px" src="../src/img/instagram (1).png">
+            </div>
+            <div>
+              <img width="20px" src="../src/img/social.png">
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="d-flex mt-5 justify-content-between align-items-center">
+        <div class="">
+          <div class="g_border d-flex align-items-center justify-content-center">
+            <h2 class="align-text-center">კონტაქტი</h2>
+          </div>
+          
+          <p class="mt-3">Email: inforest44@gmail.com</p>
+          <p>WhatsApp: +79246065230</p>
+          <p>ტელეფონი: +995797960707</p>
+          <p>მისამართი: თბილისი,მარჯანიშვილი N2</p>
+        </div>
+        <div class="d-flex m gap-3">
+          <input class="footer_email" placeholder="Email">
+          <button class="btn-primary" type="sunmit">გამოწერა</button>
+        </div>
+        
+      </div>
+      <hr class="mt-5 footer_line">
+        <div class="d-flex justify-content-end gap-3">
+          <p>
+            ყველა უფლება დაცულია © 2019 GeoRest
+          </p>
+          
+        </div>
+    </div>
+</div>
+</div>
+</footer>
+<footer class="response-only">
+  <div class="container mb_down">
+    <div class="footerPhoto">
+      <a href="../ka/index.html">
+        <img width="120px" src="../src/img/footerlogo.jpg">
+      </a>
+    </div>
+    <ul class="list-unstyled mt-5 text-center">
+      <li>
+        <a href="../ka/aboutus.html">ჩვენ შესახებ</a>
+      </li>
+      <li class="mt-2">
+        <a href="../ka/tours.html">ტურები</a>
+      </li>
+      <li class="mt-2">
+        <a href="../ka/aboutgeo.html">საქართველო</a>
+      </li>
+     
+    
+    </ul>
+    <div class="mt-5">
+      <div class="d-flex justify-content-center">
+        <h2 class="g_border text-center">კონტაქტი</h2>
+      </div>
+      <p class="mt-3 text-center">Email: inforest44@gmail.com</p>
+      <p class="text-center">WhatsApp: +79246065230</p>
+      <p class="text-center">ტელეფონი: +995797960707</p>
+      <p class="text-center">მისამართი: თბილისი,მარჯანიშვილი N2</p>
+    </div>
+     <!-- Subscribe form for mobile -->
+     <div class="mt-5 mobile_emailborder d-flex flex-wrap justify-content-center align-items-center gap-3">
+      <input class="mb_footer_email" placeholder="Email">
+      <button class="btn-primaryRes" type="sunmit">გამოწერა</button>
+    </div>
+
+    <!-- Social media icons -->
+    <div class="d-flex mt-5 gap-3 justify-content-center">
+      <div><img width="20px" src="../src/img/tik-tok.png" alt="TikTok"></div>
+      <div><img width="20px" src="../src/img/instagram (1).png" alt="Instagram"></div>
+      <div><img width="20px" src="../src/img/social.png" alt="Social Media"></div>
+    </div>
+    <div>
+      <hr class="mt-5 mbfooter_line">
+    </div>
+    <div>
+      <p>
+       ყველა უფლება დაცულია © 2019 GeoRest
+      </p>
+     
+    </div>
+  </div>
+</div>
+</footer>
+<script src="../language.js"></script>
+<script src="../tours.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
